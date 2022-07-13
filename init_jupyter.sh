@@ -3,6 +3,7 @@
 # Clone the repository in /home/jovyan/work
 REPO=tuto-interactif-minimal
 REPO_URL=https://github.com/TheAIWizard/${REPO}.git
+IPYNB_PATH=Lab1_correction.ipynb
 git clone $REPO_URL $ROOT_PROJECT_DIRECTORY/${REPO}
 chown -R jovyan:users $ROOT_PROJECT_DIRECTORY/${REPO}
 
