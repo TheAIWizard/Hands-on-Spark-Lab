@@ -4,11 +4,13 @@
 
 ## Objectifs
 
-Ce TP a pour but de vous familiariser avec l'interface d'Amazon Web Service (AWS). Pendant ce TP vous allez :
+Dans un premier temps, ce TP a pour but de prendre en main l'interface du datalab SSP Cloud, une instance du logiciel open source Onyxia. Puis, de vous représenter globalement, en toute simplicité, le contexte Spark. Qu'est ce qui se passe quand j'utilise Spark ? C'est quoi déjà ? Qu'est ce que je peux faire avec ? En quoi c'est stylé ?
 
-- Créer une compte AWS educate si ce n'est pas déjà fait
-- Copier des données dans votre espace de stockage Amazon Simple Storage Service (S3)
-- Lancer une machine virtuelle (VM) et s'y connecter en SSH.
+Pendant ce TP vous allez :
+
+- Créer une compte sur le SSP Cloud si ce n'est pas déjà fait (easy)
+- Copier des données dans votre espace de stockage MinIO (S3)
+- Lancer un service.
 - Exécuter différentes commandes de base 
   - `ls` pour lister les documents dans un dossier
   - `cd` pour change directory pour naviguer dans une arborescence de fichiers
@@ -17,7 +19,7 @@ Ce TP a pour but de vous familiariser avec l'interface d'Amazon Web Service (AWS
   - `chmod` pour changer les permissions d'un fichier
   - `time [commande]` pour mesurer la temps d'exécution d'une commande
 
-- Eteindre votre VM
+- Eteindre votre service
 
 ## 1. Création du compte AWS Academy 
 
