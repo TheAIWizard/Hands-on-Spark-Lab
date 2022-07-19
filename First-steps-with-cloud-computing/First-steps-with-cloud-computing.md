@@ -8,7 +8,7 @@ Dans un premier temps, ce TP a pour but de prendre en main l'interface du datala
 
 Pendant ce TP vous allez :
 
-- Créer une compte sur le SSP Cloud si ce n'est pas déjà fait 
+- Créer un compte sur le SSP Cloud si ce n'est pas déjà fait 
 - Copier des données dans votre espace de stockage MinIO (S3)
 - Lancer un service
 - Exécuter différentes commandes de base 
@@ -18,8 +18,9 @@ Pendant ce TP vous allez :
   - `mc cp` pour copier des fichiers depuis un bucket MinIO (S3)
   - `chmod` pour changer les permissions d'un fichier
   - `time [commande]` pour mesurer la temps d'exécution d'une commande
-
+  - `kubectl get pods` pour lister les services/pods en cours de lancement
 - Eteindre votre service
+
 
 ## 1. Création d'un compte sur le SSP Cloud d'Onyxia
 
@@ -35,7 +36,7 @@ Par défaut, l’interface du SSP Cloud est en anglais. Pour choisir le françai
 
 ## 2. Exploration
 
-Dans l'onglet "Mes services", vous trouverez, entre autres :
+Dans l'onglet “**Catalogue de services**”, vous trouverez, entre autres :
 
 - VS Code, votre éditeur de code préféré 
 - R Studio, l'environnement phare pour manipuler R 
@@ -55,7 +56,7 @@ L'implémentation de S3 est payante mais sa spécification est gratuite !
 
 Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire vers S3 (MinIO) si vous cochez la case correspondante, au moment de lancer votre service. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans S3. Chaque élément hébergé dans S3, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
 
-Patience ! Nous verrons comment lancer un service après cet aparté sur MinIO. L'image ci-dessous vous sert seulement de petit encas pour illustrer mon propos.
+Patience ! Nous verrons comment lancer un service après cet aparté sur MinIO. L'image ci-dessous vous sert seulement de petit encas pour illustrer mon propos. Ce qui vient d'être expliqué peut par exemple s'appliquer à un service Rstudio.
 
 ![](img/coche_s3_lancement_service.png)
 
@@ -87,9 +88,7 @@ Félicitations ! Vous savez déposer un fichier sur votre bucket perso sur MinIO
 
 - [ ] Cliquer sur l’onglet “**Catalogue de services**” qui est accessible à gauche 
 
-  ![](img/ec2_accueil.png)
-
-- [ ] Choisissez le service que vous souhaitez lancer dans le catalogue. Prenons Rstudio un logiciel que vous connaissez bien. 
+- [ ] Choisissez le service que vous souhaitez lancer dans le catalogue. Prenons Rstudio un logiciel que nous connaissons bien. 
 
 - [ ]  Si besoin, vous choisissez ensuite la configuration de votre service dans `Configuration 'nom du service'`. Par exemple, vous pouvez choisir les ressources alloués à votre conteneur (RAM, CPU) dans l'onglet `Resources`. Si vous souhaitez accéder à votre service depuis n'importe quel ordinateur (adresse IP plus précisément), décochez `Enable IP protection` dans l'onglet `Security` comme le montre l'image ci-dessous: 
 
