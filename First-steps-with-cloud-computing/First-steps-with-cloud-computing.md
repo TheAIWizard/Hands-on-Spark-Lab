@@ -200,4 +200,4 @@ Depuis cette écran vous êtes connecté à votre machine distante. Par exemple 
 Le coût d'un conteneur est fonction de son temps d'utilisation, pas du travail qu'il accomplit. Ainsi, une fois le travail effectué, vous _devez_ éteindre vos services ! **Même si le coût horaire est bas, faire tourner une machine EC2 pendant 1 semaine se chiffre en dizaines d'euros!**
 
 Pour éteindre votre service, allez sur l'onglet' `Mes services`. Vous pouvez éteindre à tout moment, le service que vous souhaitez à coup de click sur l'icône poubelle.
-  [ ] ![](img/arret_service.png)
+- [ ] ![](img/arret_service.png)
