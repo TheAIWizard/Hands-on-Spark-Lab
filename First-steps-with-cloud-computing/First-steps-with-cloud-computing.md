@@ -41,7 +41,7 @@ Dans l'onglet “**Catalogue de services**”, vous trouverez, entre autres :
 - VS Code, votre éditeur de code préféré 
 - R Studio, l'environnement phare pour manipuler R 
 - Postgresql, bien pratique pour vos bases de données
-- Bien d'autres services dédiées à l'analyse de données, aux calculs distribués, déploiement d'appplications sur le web, _machine-learning_,  ML ops ...
+- Bien d'autres services dédiés à l'analyse de données, aux calculs distribués, au data engineering, au DevOps, ML Ops, _machine-learning_...
 
 
 ## 3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)
@@ -102,41 +102,32 @@ https://user-images.githubusercontent.com/37664429/179776774-0e4b779f-a841-4269-
 
 - [ ] Félicitations ! Votre service est en cours de lancement. Si vous avez oubliez le mot de passe de votre service, pas de panique à bord ! Vous pouvez toujours retourner dans `Mes services` et cliquer sur `copier le mot de passe`.
 
-## 7. Connexion à sa VM
+## 7. Ouvrir un terminal sur son service
 
-- [ ] Une fois l'instance lancée vous pouvez accéder à son écran d'administration en cliquant sur son `id d'instance`
+- [ ] Lancez un service VS Code en configurant dans l'option '`Configuration VS Code > Kubernetes`, **admin** comme Role.
 
-  ![](img/ec2_accueil_instance.png)
+Plusieurs services comme Jupyter offrent la possibilité d'ouvrir un terminal. Le plus commode est de lancer un service VS Code et d'ouvrir un terminal comme suit:
 
-Vous y trouverez de nombreuses informations, mais surtout l'adresse `IPv4 publique` qui est adresses IP (Internet Protocol) de votre machine pour y accéder en étant à l'extérieur de la plateforme AWS, par exemple depuis votre ordinateur.
+![](img/terminal_vscode.png)
 
-- [ ] Lancez PuTTY
+Petite mise en contexte: un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolé du reste avec tout ce dont il a besoin pour s’exécuter. Notre VS Code est donc isolé des autres services qui ont pu être lancé. Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ dans l'un, il ne sera pas disponible dans l'autre.
+Comme les services tournent sur le datalab, n'essayez pas de chercher dans vos documents où se trouve les fichiers que vous avez pu créer !
 
-- [ ] Dans la partie `Host Name` saisissez adresse publique de votre serveur
+Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lancer et gérer plusieurs conteneurs à la volée dans le cloud. C'est ce qui permet à Onyxia de lancer plusieurs services facilement en quelques clicks.
 
-- [ ] Dans la partie `Saved Session` rentrez le nom que vous voulez puis cliquez sur `Save`
+- [ ]Tapez dans le terminal `kubectl get pods`. Caliente ! Vous pouvez voir tous les services en cours de lancement
+Pourquoi pod ? Vous le verrez l'année prochaine
 
-  ![](img/putty1.png)
+Avantages: 
+  - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment contrairement à la VM donc expérimentez au max !
+  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "pas juste ça ne marche pas sur ma machine mais chez toi si !" 
 
-- [ ] Puis allez dans le menu `SSH` et chargez votre fichier .ppk
 
-  ![](img/putty2.png)
+Les conteneurs\services ont donc forcément vocation à être éphémères. D'ailleurs, leur durée de vie est de 24 heures.
+Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP
 
-  - [ ] Enfin retournez dans l'écran initial, cliquez sur le nom de la session puis sur `Save` pour sauvegarder votre configuration. Lancez la session SSH.
 
-    ![](img/putty3.png)
-
-- [ ] Une fenêtre semblable va s'ouvrir pour vous prévenir que c'est la première fois que vous vous connectez à cette machine et si vous lui faites confiance. Vous allez cliquer sur `Oui`
-
-  ![](img/putty_warning.png)
-
-  - [ ] Un terminal va s'ouvrir avec écrit `login as:`. Saisissez `ec2-user` puis validez ([documentation officielle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html))
-
-    ![](img/terminal ec2.png)
-
-  - [ ] Voilà vous venez de vous connecter à votre machine virtuelle. **Bien que visuellement le terminal se trouve sur votre écran, tout ce que vous allez exécuter dans ce terminal sera réalisé sur une machine distante**. Vous pouvez ainsi réaliser des calculs très longs et nécessitant une grande puissance de calcul sur une machine puissance depuis votre ordinateur. Par contre cette machine n'a pas d'interface graphique (GUI : *graphical user interface*) et va nécessiter de connaitre quelques rudiments de *bash*.
-
-## 8. Jouer avec sa VM
+## 8. Jouer avec son service
 
 Le but de cette section es de vous faire manipuler quelques commandes de base en bash et de reproduire un benchmark des langages comme fait en cours. Vous allez :
 
@@ -153,14 +144,14 @@ Pour rappel ce benchmark se base sur le calcul de la température max annuelle �
 
 ###  8.1 Mise en place des fichiers du TP 
 
-- [ ] Téléchargez vos fichiers stockés sur S3. Pour ce faire vous allez saisir la commande suivante `aws s3 cp [s3://object/uri] [output/folder]`.  Pour récupérer l'URI de votre objet S3, allez sur la page de votre objet et cliquez sur "Copier l'URI S3". Pour `output/folder`, vous allez utiliser le répertoire courant avec un `.`. Vous devriez obtenir une commande et un sortie similaire à celle-ci :
+- [ ] Téléchargez vos fichiers stockés sur S3. Pour ce faire vous allez saisir la commande suivante `mc cp --recursive [s3/uri] [output/folder]`.  Pour récupérer l'URI de votre objet S3, retournez sur MinIO, ouvrez votre bucket, cliquez sur le fichier à uploader et copier le chemin à gauche de `Create new path` comme expliqué précedemment dans la partie 4 . Pour `output/folder`, vous allez utiliser le répertoire courant avec un `.`. Vous devriez obtenir une commande et un sortie similaire à celle-ci :
 
   ```
-  [ec2-user@ip-172-31-85-99 ~]$ aws s3 cp s3://remi-pepin-21032022/fichiersTP0.zip .
-  download: s3://remi-pepin-21032022/fichier TP.zip to ./fichier TP.zip
+  (basesspcloud) coder@vscode-520883-6dff9c886f-6pwpc:~/work$ mc cp --recursive s3/votre-identifiant/fichier TP.zip
+  ...dentifiant/fichier TP.zip:  15.84 KiB / 15.84 KiB
   ```
 
-- [ ] Avec la commande `ls` (*list*) vérifiez que vous avez bien téléchargé les fichiers sur S3 dans le répertoire courant.
+- [ ] Avec la commande `ls` (*list*) vérifiez que vous avez bien téléchargé les fichiers sur S3 dans le répertoire courant. Vous devriez le voir apparaître dans le gestionnaire de donnéees de VS Code.
 
 - [ ] Vous allez maintenant extraire les fichiers de l'archive avec la commande `unzip [nom de votre fichier]`. Vérifiez que cela à bien fonctionné avec la commande `ls`
 
@@ -204,8 +195,9 @@ Dans cette partie vous allez reproduire l'expérience du cours consistant à tes
 
 Depuis cette écran vous êtes connecté à votre machine distante. Par exemple tapez la commande suivante `ls` pour voir que vous avez bien vos fichiers, puis tentez de les réexécuter.
 
-## 9. Eteindre sa VM
+## 9. Eteindre son service
 
-Le coût d'une VM est fonction de son temps d'utilisation, pas du travail qu'il accomplit. Ainsi, une fois le travail effectué, vous _devez_ éteindre vos VMs ! **Même si le coût horaire est bas, faire tourner une machine EC2 pendant 1 semaine se chiffre en dizaines d'euros!**
+Le coût d'un conteneur est fonction de son temps d'utilisation, pas du travail qu'il accomplit. Ainsi, une fois le travail effectué, vous _devez_ éteindre vos services ! **Même si le coût horaire est bas, faire tourner une machine EC2 pendant 1 semaine se chiffre en dizaines d'euros!**
 
-Pour éteindre votre VM, allez sur la page d'accueil `EC2 > Instances` en cours d'exécution ou sur la bar de navigation `Instances > Instances`, enfin `Etat de l'instance`. Selon le type d'instance, vous pouvez l'arrêter (**EN:** _stop_, pour la réutiliser plus tard), ou la résilier (**EN:** _terminate_, i.e. la supprimer). Dans les deux cas, les données en mémoire et le stockage local sont perdus, mais dans le premier cas, la configuration (URL et IP) sont conservés.
+Pour éteindre votre service, allez sur l'onglet' `Mes services`. Vous pouvez éteindre à tout moment, le service que vous souhaitez à coup de click sur l'icône poubelle.
+  [ ] ![](img/arret_service.png)
