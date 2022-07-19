@@ -110,22 +110,22 @@ Plusieurs services comme Jupyter offrent la possibilité d'ouvrir un terminal. L
 
 ![](img/terminal_vscode.png)
 
-Petite mise en contexte: un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolé du reste avec tout ce dont il a besoin pour s’exécuter. Notre VS Code est donc isolé des autres services qui ont pu être lancé. Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ dans l'un, il ne sera pas disponible dans l'autre.
+###  Petite mise en contexte: 
+
+Un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolé du reste avec tout ce dont il a besoin pour s’exécuter. Notre VS Code est donc isolé des autres services qui ont pu être lancé. Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ dans l'un, il ne sera pas disponible dans l'autre.
 Comme les services tournent sur le datalab, n'essayez pas de chercher dans vos documents où se trouve les fichiers que vous avez pu créer !
 
 Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lancer et gérer plusieurs conteneurs à la volée dans le cloud. C'est ce qui permet à Onyxia de lancer plusieurs services facilement en quelques clicks.
 
-- [ ]Tapez dans le terminal `kubectl get pods`. Caliente ! Vous pouvez voir tous les services en cours de lancement
-Pourquoi pod ? Vous le verrez l'année prochaine
+- [ ] Tapez dans le terminal `kubectl get pods`. Caliente ! Vous pouvez voir tous les services en cours de lancement.
+- [ ] Pourquoi pod ? Vous le verrez l'année prochaine mais pour le moment vous pouvez vous dire un pod = un conteneur. Même s'il y a une nuance, c'est souvent le cas en pratique.
 
 Avantages: 
   - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment contrairement à la VM donc expérimentez au max !
   - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "pas juste ça ne marche pas sur ma machine mais chez toi si !" 
 
-
-Les conteneurs\services ont donc forcément vocation à être éphémères. D'ailleurs, leur durée de vie est de 24 heures.
-Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP
-
+Les conteneurs\services ont donc forcément vocation à être éphémères. D'ailleurs, je ne vous l'ai pas dit mais leur durée de vie est de 24 heures environ.
+Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP.
 
 ## 8. Jouer avec son service
 
