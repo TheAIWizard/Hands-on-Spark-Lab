@@ -23,7 +23,7 @@ Pendant ce TP vous allez :
 
 ## 1. Création d'un compte sur le SSP Cloud d'Onyxia
 
-Il est nécessaire de disposer d’un compte personnel SSP Cloud pour en utiliser les services. Si vous n’avez pas de compte sur le SSP Cloud, vous pouvez vous en créer un en cliquant sur ce lien (https://datalab.sspcloud.fr/home) puis suivre les indications dans l'onglet cccConnexion`. Deux points sont importants à noter :
+Il est nécessaire de disposer d’un compte personnel SSP Cloud pour en utiliser les services. Si vous n’avez pas de compte sur le SSP Cloud, vous pouvez vous en créer un en cliquant sur ce lien (https://datalab.sspcloud.fr/home) puis suivre les indications dans l'onglet `Connexion`. Deux points sont importants à noter :
 - vous devez utiliser votre adresse mail ENSAI
 - votre nom d’utilisateur ne doit contenir ni caractères accentués, ni caractère spécial, ni signe de ponctuation. Ce point est essentiel, car votre compte ne fonctionnera pas si votre nom d’utilisateur comprend l’un de ces caractères. Par exemple, si vous vous appelez Jérôme-Gérard L’Hâltère, votre nom d’utilisateur pourra être jeromegerardlhaltere.
 
@@ -45,21 +45,28 @@ Dans l'onglet "Mes services", vous trouverez, entre autres :
 
 ## 3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)
 
+Le système S3 (Simple Storage System) est un système de stockage développé par Amazon et qui est maintenant devenu une référence pour le stockage en ligne. Il s’agit d’une architecture à la fois sécurisée (données cryptées, accès restreints) et performante. Il y a plus d'un moyen d'utiliser ce fameux système.
+
 **Amazon Simple Storage Service** (S3) est la solution de base que propose AWS pour stocker vos données de manière pérenne. Amazon dit assurer une durabilité de vos données de 99,999999999 %. Cela signifie que si vous stockez 10 000 000 fichiers avec Amazon S3, vous pouvez vous attendre à perdre en moyenne un objet unique une fois tous les 10 000 ans. Assurer votre stockage est payant sur AWS et ce, à coût relativement élevé.
 
 L'implémentation de S3 est payante mais sa spécification est gratuite !
 
-**MinIO** fournit une implementation open source de S3. Vous pouvez donc stocker vos données sur MinIO comme si elles étaient sur S3.
+**MinIO** fournit une implementation open source de S3. Vous pouvez donc stocker vos données sur MinIO comme si elles étaient sur S3 et ce, gratuitement.
 
 Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire vers S3 (MinIO) si vous cochez la case correspondante, au moment de lancer votre service. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans S3. Chaque élément hébergé dans S3, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
 
-![](img/MinIO_Console.png)
+Patience ! Nous verrons comment lancer un service après cette aparté sur MinIO. L'image ci-dessous vous sert de petit encas pour illustrer mon propos.
+
+![](img/coche_s3_lancement_service.png)
 
 - [ ] Cliquez sur ce lien https://minio-console.lab.sspcloud.fr et connectez vous avec votre compte du datalab SSP Cloud 
 
-![](img/MinIO_Console_Buckets.png)
+![](img/MinIO_Console.png)
 
-- [ ] Vous pouvez voir deux "compartiments" (en anglais "bucket")  
+- [ ] Vous pouvez voir deux "compartiments" (en anglais "bucket") 
+
+![](img/MinIO_Console_Buckets.png) 
+
 - [ ] Votre compartiment est celui marqué par votre identifiant. **Vous seul pouvez remplir ou vider votre bucket donc vous ne pouvez pas accéder à ceux des autres utilisateurs**
 
 ## 4. Copie des données dans votre espace de stockage
