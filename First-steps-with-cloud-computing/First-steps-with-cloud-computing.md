@@ -83,41 +83,25 @@ Patience ! Nous verrons comment lancer un service après cet aparté sur MinIO. 
 
 Félicitations ! Vous savez déposer un fichier sur votre bucket perso sur MinIO.
 
-## 5. Création d'une clef SSH
+## 5. Lancement d'un service
 
-**SSH** (**S**ecure **SH**ell) permet de se connecter et contrôler de façon sécurisée un système Unix distant comme le cluster de l'Ensai ou une machine hébergée sur AWS. Pour plus d'information, je vous conseille de lire le début de cette [page web](https://doc.fedora-fr.org/wiki/SSH_:_Authentification_par_cl%C3%A9).
-
-- [ ] Dans la barre de recherche, cherchez "paire de clés" et cliquez dessus 
-- [ ] Cliquez sur "Créer une paire de clés" 
-- [ ] Donnez lui un nom (par ex: "ensai_big_data_TP"), sélectionnez le format PPK si vous utilisez une machine windows, et pem si vous utilisez une machine sous Linux / Mac Os, et cliquez sur "créer" 
-- [ ] Cela va lancer le téléchargement d'un fichier, ne le perdez pas ! 
-
-## 6. Lancement d'un service
-
-- [ ] Dans la barre de recherche, cherchez "EC2" et cliquez dessus 
+- [ ] Cliquer sur l’onglet “**Catalogue de services**” qui est accessible à gauche 
 
   ![](img/ec2_accueil.png)
 
-- [ ] Cliquez sur `Lancer une instance`  
+- [ ] Choisissez le service que vous souhaitez lancer dans le catalogue et c'est parti ! 
 
-- [ ] Vous devez choisir l'image de la machine à créer appelé ici AMI pour *Amazon Machine Image*. Une image contient notamment le système d'exploitation. Choisissez la première: Amazon Linux 2 AMI (HVM) - Kernel 5.10.
+- [ ]  Si besoin, vous choisissez ensuite la configuration de votre service dans `Configuration 'nom du service'`. Par exemple, vous pouvez choisir les ressources alloués à votre conteneur (RAM, CPU) dans l'onglet `Resources`. Si vous souhaitez accéder à votre service depuis n'importe quel ordinateur (adresse IP plus précisément), décochez `Enable IP protection` dans l'onglet `Security` comme le montre l'image ci-dessous: 
 
-  ![](img/ec2_ami.png)
+  ![](img/enable_ip_protection_service_rstudio.png)
 
-- [ ]  Vous choisissez ensuite la configuration de VM. Par exemple, vous pouvez choisir une machine d'usage général à 1 cœurs `t2.micro` pour avoir une machine de faible puissance mais peu chère (0.012\$/heure) pour une machine plus puissante comme une `t2.xlarge`  (0.188\$/heure). Comme la facturation est au temps d'utilisation, pensez à éteindre vos machines à la fin du TP !
+- [ ] Puis cliquez sur `Launch`. Une vidéo de 34 secondes vaut mieux qu'un long discours 
 
-  ![](img/ec2_machine.png)
+  ![](img/lancement_service.mp4)
 
-- [ ] Sur l'écran suivant sélectionnez pour le rôle IAM `LabInstanceProfile`
-  ![](img/ec2_iam.png)
+Satisfait ?
 
-- [ ] Puis cliquez sur `Vérifier et lancer`
-
-- [ ] Ensuite validez la création de l'instance.
-
-- [ ] Choisissez la bonne paire de clés
-
-- [ ] Et voilà! Votre VM est en cours de lancement. Cliquez sur `Affichez les instances` et attendez quelques minutes !  
+- [ ] Et voilà! Votre service est en cours de lancement. Si vous avez oubliez le mot de passe de votre service, pas de panique à bord ! Vous pouvez toujours retourner dans `Mes services` et cliquer sur `copier le mot de passe`.
 
 ## 7. Connexion à sa VM
 
