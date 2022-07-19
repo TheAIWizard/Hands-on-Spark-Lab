@@ -89,19 +89,17 @@ Félicitations ! Vous savez déposer un fichier sur votre bucket perso sur MinIO
 
   ![](img/ec2_accueil.png)
 
-- [ ] Choisissez le service que vous souhaitez lancer dans le catalogue et c'est parti ! 
+- [ ] Choisissez le service que vous souhaitez lancer dans le catalogue. Prenons Rstudio un logiciel que vous connaissez bien. 
 
 - [ ]  Si besoin, vous choisissez ensuite la configuration de votre service dans `Configuration 'nom du service'`. Par exemple, vous pouvez choisir les ressources alloués à votre conteneur (RAM, CPU) dans l'onglet `Resources`. Si vous souhaitez accéder à votre service depuis n'importe quel ordinateur (adresse IP plus précisément), décochez `Enable IP protection` dans l'onglet `Security` comme le montre l'image ci-dessous: 
 
   ![](img/enable_ip_protection_service_rstudio.png)
 
-- [ ] Puis cliquez sur `Launch`. Une vidéo de 34 secondes vaut mieux qu'un long discours 
+- [ ] Puis cliquez sur `Launch` et c'est parti ! Une vidéo de 34 secondes vaut mieux qu'un long discours 
 
-  ![](img/lancement_service.mp4)
+- [ ] Satisfait ?
 
-Satisfait ?
-
-- [ ] Et voilà! Votre service est en cours de lancement. Si vous avez oubliez le mot de passe de votre service, pas de panique à bord ! Vous pouvez toujours retourner dans `Mes services` et cliquer sur `copier le mot de passe`.
+- [ ] Félicitations ! Votre service est en cours de lancement. Si vous avez oubliez le mot de passe de votre service, pas de panique à bord ! Vous pouvez toujours retourner dans `Mes services` et cliquer sur `copier le mot de passe`.
 
 ## 7. Connexion à sa VM
 
