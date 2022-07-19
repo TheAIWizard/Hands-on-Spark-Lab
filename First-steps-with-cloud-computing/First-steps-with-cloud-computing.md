@@ -45,19 +45,23 @@ Dans l'onglet "Mes services", trouverez, entre autres :
 
 ## 3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)
 
-**Amazon Simple Storage Service** (S3) est la solution de base que propose AWS pour stocker vos données de manière pérenne. Amazon dit assurer une durabilité de vos données de 99,999999999 %. Cela signifie que si vous stockez 10 000 000 fichiers avec Amazon S3, vous pouvez vous attendre à perdre en moyenne un objet unique une fois tous les 10 000 ans.
+**Amazon Simple Storage Service** (S3) est la solution de base que propose AWS pour stocker vos données de manière pérenne. Amazon dit assurer une durabilité de vos données de 99,999999999 %. Cela signifie que si vous stockez 10 000 000 fichiers avec Amazon S3, vous pouvez vous attendre à perdre en moyenne un objet unique une fois tous les 10 000 ans. Assurer votre stockage est payant sur AWS et ce, à coût relativement élevé.
 
-Ce stockage est assuré à coût relativement élevé (de l'ordre de ~0,02 \$/Go/mois), sachant que vous payez en sus les opérations de lecture (de l'ordre de ~0,09 \$/Go ; les écritures sont gratuites). 1 To de données vous coûte ainsi 240€ à l'année. Pour comparaison, un disque dur externe  SSD d'1 To coûte actuellement ~100€ (pour un durabilité moindre), et un cloud-storage (type dropbox) pour particulier coûte ~10€ / mois pour 2 To (pour une durabilité comparable). S3 est ainsi destiné à des données utilisées régulièrement par d'autres application hébergées par AWS. D'autres offres de stockage existent comme les archives, pour des données utilisées moins régulièrement, ou les bases de données.
+L'implémentation de S3 est payante mais sa spécification est gratuite !
 
-Tous les services que vous propose AWS peuvent nativement lire depuis et écrire vers S3 si vous leur en donnée le droit. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans S3. Chaque élément hébergé dans S3, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
+**MinIO** fournit une implementation open source de S3. Vous pouvez donc stocker vos données sur MinIO comme si elles étaient sur S3.
 
-- [ ] Dans la barre de recherche, cherchez "S3" et cliquez dessus
+Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire vers S3 si vous cochez la case correspondante, au moment de lancer votre service. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans S3. Chaque élément hébergé dans S3, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
 
-![](img/s3_accueil.png)
+![](img/MinIO_Console.png)
 
-- [ ] Cliquez sur "Créer un compartiment" (en anglais un "bucket")  
-- [ ] Choisissez un nom unique à votre compartiment (comme votre nom-prénom et la date et heure du jour)
-- [ ] Laissez toutes les valeurs par défaut et descendez en bas de la page pour créer votre compartiment 
+- [ ] CLiquez sur ce lien https://minio-console.lab.sspcloud.fr et connectez vous avec votre compte du datalab SSP Cloud 
+
+![](img/MinIO_Console_Buckets.png)
+
+- [ ] Vous pouvez voir deux "compartiments" (en anglais "bucket")  
+- [ ] Choisissez le compartiment à votre nom (vous seul pouvez remplir ou vider votre bucket donc vous ne pouvez pas accéder à ceux des autres utilisateurs)
+- [ ] L'utilisation est assez intuitive à partir de là. Pour déposer des dossiers ou fichiers, cliquez sur 'Upload' et vous pouvez lire l'URL **unique** de l'objet à gauche du bouton 'Create new path"
 
 ## 4. Copie des données dans votre espace de stockage
 
