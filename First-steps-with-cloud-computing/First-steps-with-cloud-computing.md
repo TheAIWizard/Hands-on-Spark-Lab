@@ -27,9 +27,9 @@ Il est nécessaire de disposer d’un compte personnel SSP Cloud pour en utilise
 - vous devez utiliser votre adresse mail ENSAI
 - votre nom d’utilisateur ne doit contenir ni caractères accentués, ni caractère spécial, ni signe de ponctuation. Ce point est essentiel, car votre compte ne fonctionnera pas si votre nom d’utilisateur comprend l’un de ces caractères. Par exemple, si vous vous appelez Jérôme-Gérard L’Hâltère, votre nom d’utilisateur pourra être jeromegerardlhaltere.
 
-Par défaut, l’interface du SSP Cloud est en anglais. Pour choisir le français, vous pouvez:
+Par défaut, l’interface du SSP Cloud est en anglais. Pour choisir le français, vous avez le choix entre:
   - cliquer en bas à droite de la fenêtre puis choisir le français dans les options proposées
-  - Cliquer sur `My account` dans le menu de gauche puis dans l’onglet `Interface preferences` vous pouvez changer la langue dans la fenêtre qui s’affiche.
+  - cliquer sur `My account` dans le menu de gauche puis dans l’onglet `Interface preferences` vous pouvez changer la langue dans la fenêtre qui s’affiche.
 
 ![](img/00_choisir_langue.png)
 
@@ -55,7 +55,7 @@ L'implémentation de S3 est payante mais sa spécification est gratuite !
 
 Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire vers S3 (MinIO) si vous cochez la case correspondante, au moment de lancer votre service. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans S3. Chaque élément hébergé dans S3, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
 
-Patience ! Nous verrons comment lancer un service après cette aparté sur MinIO. L'image ci-dessous vous sert de petit encas pour illustrer mon propos.
+Patience ! Nous verrons comment lancer un service après cet aparté sur MinIO. L'image ci-dessous vous sert seulement de petit encas pour illustrer mon propos.
 
 ![](img/coche_s3_lancement_service.png)
 
@@ -67,7 +67,7 @@ Patience ! Nous verrons comment lancer un service après cette aparté sur MinIO
 
 ![](img/MinIO_Console_Buckets.png) 
 
-- [ ] Votre compartiment est celui marqué par votre identifiant. **Vous seul pouvez remplir ou vider votre bucket donc vous ne pouvez pas accéder à ceux des autres utilisateurs**
+- [ ] Votre compartiment est celui marqué par votre identifiant. **Vous seul pouvez remplir ou vider votre bucket donc vous ne pouvez pas modifier ceux des autres utilisateurs**
 
 ## 4. Copie des données dans votre espace de stockage
 
