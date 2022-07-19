@@ -1,4 +1,4 @@
-# TP 0 — Partie 1: Découverte de l'interface d'Amazon Web Service (AWS)
+# TP 0 — Partie 1: Découverte d'Onyxia et de son datalab SSP Cloud
 
 [TOC]
 
@@ -10,36 +10,40 @@ Pendant ce TP vous allez :
 
 - Créer une compte sur le SSP Cloud si ce n'est pas déjà fait (easy)
 - Copier des données dans votre espace de stockage MinIO (S3)
-- Lancer un service.
+- Lancer un service
 - Exécuter différentes commandes de base 
   - `ls` pour lister les documents dans un dossier
   - `cd` pour change directory pour naviguer dans une arborescence de fichiers
   - `yum` pour installer un package
-  - `aws s3 cp` pour copier des fichiers depuis S3
+  - `mc cp` pour copier des fichiers depuis un bucket MinIO (S3)
   - `chmod` pour changer les permissions d'un fichier
   - `time [commande]` pour mesurer la temps d'exécution d'une commande
 
 - Eteindre votre service
 
-## 1. Création du compte AWS Academy 
+## 1. Création d'un compte sur le SSP Cloud d'Onyxia
 
-Suivez les instructions à partir du mail AWS Academy reçu sur votre adresse ENSAI pour créer votre compte si ce n'est pas fait, puis celles du fichier [AWS Academy Learner Lab - Student](https://foad-moodle.ensai.fr/pluginfile.php/22636/mod_resource/content/0/AWS%20Academy%20Learner%20Lab%20-%20Student%20Guide.pdf) Guide pour accéder à la console AWS.
+Il est nécessaire de disposer d’un compte personnel SSP Cloud pour en utiliser les services. Si vous n’avez pas de compte sur le SSP Cloud, vous pouvez vous en créer un en cliquant sur ce lien (https://datalab.sspcloud.fr/home) puis suivre les indications dans l'onglet 'Connexion'. Deux points sont importants à noter :
+- vous devez utiliser votre adresse mail ENSAI;
+- votre nom d’utilisateur ne doit contenir ni caractères accentués, ni caractère spécial, ni signe de ponctuation. Ce point est essentiel, car votre compte ne fonctionnera pas si votre nom d’utilisateur comprend l’un de ces caractères. Par exemple, si vous vous appelez Jérôme-Gérard L’Hâltère, votre nom d’utilisateur pourra être jeromegerardlhaltere.
 
-Le compte AWS que vous allez utiliser pour les TP est localisé en Virginie du Nord. Ne changez pas cela ! Comme votre compte est à but purement scolaire, vous ne disposez pas de l'intégralité des services de la plateforme (vous n'avez pas accès aux information de facturation par exemple). De même votre compte est un compte généré par aws academy, et vous ne pouvez pas y accéder sans passer par ce service.  Pour des connexions futures à AWS dans le cadre scolaire, passez toujours par le portail AWS academy.
+Par défaut, l’interface du SSP Cloud est en anglais. Pour choisir le français, vous pouvez:
+  - cliquer en bas à droite de la fenêtre puis choisir le français dans les options proposées
+  - Cliquer sur 'My account' dans le menu de gauche puis dans l’onglet 'Interface preferences' vous pouvez changer la langue dans la fenêtre qui s’affiche.
 
-![](img/aws console.png)
+![](img/00_choisir_langue.png)
 
 ## 2. Exploration
 
-Dans l'onglet "Services", trouverez, entre autres :
+Dans l'onglet "Mes services", trouverez, entre autres :
 
-- EC2, les services de calcul 
-- S3, les services de calcul 
-- La section dédiée aux bases de données 
-- La section dédiée au _machine-learning_  
-- La section dédiée à l'analyse de données 
+- VS Code, votre éditeur de code préféré 
+- R Studio, l'environnement phare pour manipuler R 
+- Postgresql, bien pratique pour vos bases de données
+- Bien d'autres services dédiées à l'analyse de données, aux calculs distribués, déploiement d'appplications sur le web, _machine-learning_,  ML ops ...
 
-## 3 Création d'un espace de stockage Amazon Simple Storage Service (S3)
+
+## 3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)
 
 **Amazon Simple Storage Service** (S3) est la solution de base que propose AWS pour stocker vos données de manière pérenne. Amazon dit assurer une durabilité de vos données de 99,999999999 %. Cela signifie que si vous stockez 10 000 000 fichiers avec Amazon S3, vous pouvez vous attendre à perdre en moyenne un objet unique une fois tous les 10 000 ans.
 
