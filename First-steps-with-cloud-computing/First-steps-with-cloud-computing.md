@@ -4,11 +4,11 @@
 
 ## Objectifs
 
-Dans un premier temps, ce TP a pour but de prendre en main l'interface du datalab SSP Cloud, une instance du logiciel open source Onyxia. Puis, de vous représenter globalement, en toute simplicité, le contexte Spark. Qu'est ce qui se passe quand j'utilise Spark ? C'est quoi déjà ? Qu'est ce que je peux faire avec ? En quoi c'est stylé ?
+Dans un premier temps, ce TP a pour but de prendre en main l'interface du datalab SSP Cloud, une instance du logiciel open source Onyxia. Puis, de vous représenter globalement, en toute simplicité, le contexte Spark. Qu'est ce qui se passe quand j'utilise Spark ? C'est quoi déjà ? Qu'est ce que je peux faire avec ? En quoi c'est stylé ? Bon allez, c'est parti on y va !
 
 Pendant ce TP vous allez :
 
-- Créer une compte sur le SSP Cloud si ce n'est pas déjà fait (easy)
+- Créer une compte sur le SSP Cloud si ce n'est pas déjà fait 
 - Copier des données dans votre espace de stockage MinIO (S3)
 - Lancer un service
 - Exécuter différentes commandes de base 
@@ -23,19 +23,19 @@ Pendant ce TP vous allez :
 
 ## 1. Création d'un compte sur le SSP Cloud d'Onyxia
 
-Il est nécessaire de disposer d’un compte personnel SSP Cloud pour en utiliser les services. Si vous n’avez pas de compte sur le SSP Cloud, vous pouvez vous en créer un en cliquant sur ce lien (https://datalab.sspcloud.fr/home) puis suivre les indications dans l'onglet 'Connexion'. Deux points sont importants à noter :
-- vous devez utiliser votre adresse mail ENSAI;
+Il est nécessaire de disposer d’un compte personnel SSP Cloud pour en utiliser les services. Si vous n’avez pas de compte sur le SSP Cloud, vous pouvez vous en créer un en cliquant sur ce lien (https://datalab.sspcloud.fr/home) puis suivre les indications dans l'onglet cccConnexion`. Deux points sont importants à noter :
+- vous devez utiliser votre adresse mail ENSAI
 - votre nom d’utilisateur ne doit contenir ni caractères accentués, ni caractère spécial, ni signe de ponctuation. Ce point est essentiel, car votre compte ne fonctionnera pas si votre nom d’utilisateur comprend l’un de ces caractères. Par exemple, si vous vous appelez Jérôme-Gérard L’Hâltère, votre nom d’utilisateur pourra être jeromegerardlhaltere.
 
 Par défaut, l’interface du SSP Cloud est en anglais. Pour choisir le français, vous pouvez:
   - cliquer en bas à droite de la fenêtre puis choisir le français dans les options proposées
-  - Cliquer sur 'My account' dans le menu de gauche puis dans l’onglet 'Interface preferences' vous pouvez changer la langue dans la fenêtre qui s’affiche.
+  - Cliquer sur `My account` dans le menu de gauche puis dans l’onglet `Interface preferences` vous pouvez changer la langue dans la fenêtre qui s’affiche.
 
 ![](img/00_choisir_langue.png)
 
 ## 2. Exploration
 
-Dans l'onglet "Mes services", trouverez, entre autres :
+Dans l'onglet "Mes services", vous trouverez, entre autres :
 
 - VS Code, votre éditeur de code préféré 
 - R Studio, l'environnement phare pour manipuler R 
@@ -51,31 +51,30 @@ L'implémentation de S3 est payante mais sa spécification est gratuite !
 
 **MinIO** fournit une implementation open source de S3. Vous pouvez donc stocker vos données sur MinIO comme si elles étaient sur S3.
 
-Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire vers S3 si vous cochez la case correspondante, au moment de lancer votre service. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans S3. Chaque élément hébergé dans S3, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
+Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire vers S3 (MinIO) si vous cochez la case correspondante, au moment de lancer votre service. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans S3. Chaque élément hébergé dans S3, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
 
 ![](img/MinIO_Console.png)
 
-- [ ] CLiquez sur ce lien https://minio-console.lab.sspcloud.fr et connectez vous avec votre compte du datalab SSP Cloud 
+- [ ] Cliquez sur ce lien https://minio-console.lab.sspcloud.fr et connectez vous avec votre compte du datalab SSP Cloud 
 
 ![](img/MinIO_Console_Buckets.png)
 
 - [ ] Vous pouvez voir deux "compartiments" (en anglais "bucket")  
-- [ ] Choisissez le compartiment à votre nom (vous seul pouvez remplir ou vider votre bucket donc vous ne pouvez pas accéder à ceux des autres utilisateurs)
-- [ ] L'utilisation est assez intuitive à partir de là. Pour déposer des dossiers ou fichiers, cliquez sur 'Upload' et vous pouvez lire l'URL **unique** de l'objet à gauche du bouton 'Create new path"
+- [ ] Votre compartiment est celui marqué par votre identifiant. **Vous seul pouvez remplir ou vider votre bucket donc vous ne pouvez pas accéder à ceux des autres utilisateurs**
 
 ## 4. Copie des données dans votre espace de stockage
 
-* [ ] Cliquez sur le nom de votre compartiment pour aller sur sa page dédiée
+* [ ] Cliquez sur le compartiment marqué par votre identifiant. 
 
-  ![](img/s3_bucket.png)
+  ![](img/MinIO_Console_Inside_Bucket.png)
 
-- [ ] À partir du bouton `Charger`, ajoutez le fichier zip du lab0 disponible sur Moodle.
+- [ ] À partir du bouton `Upload`, ajoutez le fichier zip du lab0 disponible sur Moodle.
 
 ![](img/s3_upload_file.png)
 
-- [ ] Une fois le chargement terminé cliquez sur votre fichier. Vous arriverez sur une page similaire avec le lien pour accéder à votre fichier. Aussi bien S3 que HTTP faire différence entre s3 et http
+- [ ] Une fois le chargement terminé cliquez sur votre fichier. Le lien pour accéder à votre fichier se trouvera à gauche du bouton `Create new path`. 
 
-  ![](img/s3_file.png)
+Félicitations ! Vous savez déposer un fichier sur votre bucket perso sur MinIO.
 
 ## 5. Création d'une clef SSH
 
@@ -86,7 +85,7 @@ Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire 
 - [ ] Donnez lui un nom (par ex: "ensai_big_data_TP"), sélectionnez le format PPK si vous utilisez une machine windows, et pem si vous utilisez une machine sous Linux / Mac Os, et cliquez sur "créer" 
 - [ ] Cela va lancer le téléchargement d'un fichier, ne le perdez pas ! 
 
-## 6. Création d'une machine virtuelle
+## 6. Lancement d'un service
 
 - [ ] Dans la barre de recherche, cherchez "EC2" et cliquez dessus 
 
@@ -220,5 +219,3 @@ Depuis cette écran vous êtes connecté à votre machine distante. Par exemple 
 Le coût d'une VM est fonction de son temps d'utilisation, pas du travail qu'il accomplit. Ainsi, une fois le travail effectué, vous _devez_ éteindre vos VMs ! **Même si le coût horaire est bas, faire tourner une machine EC2 pendant 1 semaine se chiffre en dizaines d'euros!**
 
 Pour éteindre votre VM, allez sur la page d'accueil `EC2 > Instances` en cours d'exécution ou sur la bar de navigation `Instances > Instances`, enfin `Etat de l'instance`. Selon le type d'instance, vous pouvez l'arrêter (**EN:** _stop_, pour la réutiliser plus tard), ou la résilier (**EN:** _terminate_, i.e. la supprimer). Dans les deux cas, les données en mémoire et le stockage local sont perdus, mais dans le premier cas, la configuration (URL et IP) sont conservés.
-
-![](img/ec2_end.png)
