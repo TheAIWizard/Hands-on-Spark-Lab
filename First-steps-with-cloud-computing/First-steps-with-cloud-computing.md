@@ -40,6 +40,8 @@ Mais d'abord, pourquoi parle t-on de Datalab ? Un Datalab est un espace dédié 
 
 Le SSP Cloud est un datalab. Cette plateforme permet aux statisticiens d’utiliser un grand nombre de logiciels de data science dans un environnement informatique ergonomique et performant.
 
+Et Onyxia alors ? Késako ? Onyxia est le nom du projet open source sur lequel est construit le datalab SSP Cloud. Vous pouvez tout à fait créer votre propre Datalab en créant une autre instance d'Onyxia pour votre organisation, entreprise, association, communauté ou une utilisation personnelle par exemple. Quelque part, on parle toujours d'Onyxia.
+
 ![](img/datalab.png)
 
 Dans l'onglet “**Catalogue de services**”, vous trouverez, entre autres :
