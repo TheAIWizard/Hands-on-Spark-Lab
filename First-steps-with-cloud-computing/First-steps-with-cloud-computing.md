@@ -133,7 +133,7 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 
 Avantages: 
   - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment contrairement à la VM donc expérimentez au max !
-  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "pas juste ça ne marche pas sur ma machine mais chez toi si !" 
+  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :/ ça ne marche pas sur ma machine mais chez toi si !" 
 
 Les conteneurs\services ont donc forcément vocation à être éphémères. D'ailleurs, je ne vous l'ai pas dit mais leur durée de vie est de 24 heures environ.
 Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP.
