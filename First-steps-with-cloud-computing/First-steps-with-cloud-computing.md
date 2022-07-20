@@ -36,12 +36,18 @@ Par défaut, l’interface du SSP Cloud est en anglais. Pour choisir le françai
 
 ## 2. Exploration
 
+Mais d'abord, pourquoi parle t-on de Datalab ? Un Datalab est un espace dédié à l’expérimentation de nouveaux outils. Il permet d’explorer des jeux de données, de la traiter, et de tester différents algorithmes de machine learning par exemple. 
+
+Le SSP Cloud est un datalab. Cette plateforme permet aux statisticiens d’utiliser un grand nombre de logiciels de data science dans un environnement informatique ergonomique et performant.
+
+![](img/datalab.png)
+
 Dans l'onglet “**Catalogue de services**”, vous trouverez, entre autres :
 
 - VS Code, votre éditeur de code préféré 
 - R Studio, l'environnement phare pour manipuler R 
 - Postgresql, bien pratique pour vos bases de données
-- Bien d'autres services dédiés à l'analyse de données, aux calculs distribués, au data engineering, au DevOps, ML Ops, _machine-learning_...
+- Bien d'autres services dédiés à _l'analyse de données_, aux _calculs distribués_, au _data engineering_, au _DevOps_, _ML Ops_, _machine-learning_...
 
 
 ## 3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)
@@ -104,7 +110,7 @@ https://user-images.githubusercontent.com/37664429/179776774-0e4b779f-a841-4269-
 
 ## 7. Ouvrir un terminal sur son service
 
-- [ ] Lancez un service VS Code en configurant dans l'option '`Configuration VS Code > Kubernetes`, **admin** comme Role.
+- [ ] Lancez un service VS Code en configurant dans l'option `Configuration VS Code > Kubernetes`, **admin** comme Role.
 
 Plusieurs services comme Jupyter offrent la possibilité d'ouvrir un terminal. Le plus commode est de lancer un service VS Code et d'ouvrir un terminal comme suit:
 
@@ -112,7 +118,10 @@ Plusieurs services comme Jupyter offrent la possibilité d'ouvrir un terminal. L
 
 ###  Petite mise en contexte: 
 
-Un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolé du reste avec tout ce dont il a besoin pour s’exécuter. Notre VS Code est donc isolé des autres services qui ont pu être lancé. Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ dans l'un, il ne sera pas disponible dans l'autre.
+Un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolé du reste avec tout ce dont il a besoin pour s’exécuter. Notre VS Code est donc isolé des autres services qui ont pu être lancé. 
+
+Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ dans l'un, il ne sera pas disponible dans l'autre.
+
 Comme les services tournent sur le datalab, n'essayez pas de chercher dans vos documents où se trouve les fichiers que vous avez pu créer !
 
 Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lancer et gérer plusieurs conteneurs à la volée dans le cloud. C'est ce qui permet à Onyxia de lancer plusieurs services facilement en quelques clicks.
@@ -197,7 +206,7 @@ Depuis cette écran vous êtes connecté à votre machine distante. Par exemple 
 
 ## 9. Eteindre son service
 
-Le coût d'un conteneur est fonction de son temps d'utilisation, pas du travail qu'il accomplit. Ainsi, une fois le travail effectué, vous _devez_ éteindre vos services ! **Même si le coût horaire est bas, faire tourner une machine EC2 pendant 1 semaine se chiffre en dizaines d'euros!**
+Une fois le taff fait, n'oubliez pas d'éteindre vos services ! **Pour ne pas gaspiller les ressources !**
 
 Pour éteindre votre service, allez sur l'onglet' `Mes services`. Vous pouvez éteindre à tout moment, le service que vous souhaitez à coup de click sur l'icône poubelle.
 - [ ] ![](img/arret_service.png)
