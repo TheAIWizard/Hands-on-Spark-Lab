@@ -230,3 +230,6 @@ Pour éteindre votre service, allez sur l'onglet' `Mes services`. Vous pouvez é
 
 ## Author
 - [Nathan Randriamanana](https://github.com/TheAIWizard)
+
+## Version AWS du TP by Rémi Pépin
+- [Lab 0 AWS](https://github.com/HealerMikado/panorama_big_data_2021/blob/main/labs/lab%200%20-%20first%20steps%20with%20cloud%20computing/TP%200%20%20D%C3%A9couverte%20de%20l'interface%20d'Amazon%20Web%20Service%20(AWS).md)
