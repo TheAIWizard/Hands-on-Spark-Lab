@@ -120,7 +120,8 @@ Plusieurs services comme Jupyter offrent la possibilité d'ouvrir un terminal. L
 
 ###  Petite mise en contexte: 
 
-![](img/Docker-friends.png) ![]<img src="img/Docker-Symbole.png" width="50" height="50">
+#![](img/Docker-friends.png) 
+<img src="img/Docker-friends.png" width="200" height="200"> <img src="img/Docker-Symbole.png" width="200" height="200">
 
 Un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolée du reste avec tout ce dont il a besoin pour s’exécuter. 
 
