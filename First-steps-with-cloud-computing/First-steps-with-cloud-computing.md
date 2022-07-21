@@ -132,11 +132,11 @@ Notre VS Code est donc isolé des autres services qui ont pu être lancé.
 
 Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ ![](img/emoji-world.png) dans l'un, il ne sera pas disponible dans l'autre.
 
-Comme les services tournent sur le datalab, n'essayez pas de chercher localement dans vos documents où se trouve les fichiers que vous avez pu créer parce qu'il n'y a aucun lien ! :scream_cat: :clown_face:
+Comme les services tournent sur le datalab, n'essayez pas de chercher localement dans vos documents où se trouve les fichiers que vous avez pu créer parce qu'il n'y a aucun lien ! :scream_cat: :clown_face: Votre code s'execute sur un cluster kubernetes distant.
 
 ![](img/lost-files.png)
 
-Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lancer et gérer plusieurs conteneurs à la volée dans le cloud. C'est ce qui permet à Onyxia de lancer plusieurs services facilement en quelques clicks.
+Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lancer et gérer plusieurs conteneurs à la volée dans le cloud. C'est ce qui permet à Onyxia de lancer plusieurs services facilement en quelques clicks. Un cluster kubernetes est donc un cluster qui répartit les services que vous voyez sur le datalab dans les différentes machines ou "workers" du cluster.
 
 ![](img/orchestrateur.png) ![](img/kuberneteslogo.png)
 
@@ -166,6 +166,8 @@ Pour rappel ce benchmark se base sur le calcul de la température max annuelle �
 - script bash :  pas de notion au sens python/java/C, interprété par votre OS. 
 
 ###  8.1 Mise en place des fichiers du TP 
+
+Vous vous rappelez de ce fameux fichier TP0 disponible sur notre bon vieux Moodle ? Comme vous êtes trop fort, vous l'avez déjà déposé dans un serveur de stockage distant compatible S3. Si vous ne vous en rappellez pas, c'était à la partie 4.
 
 - [ ] Téléchargez vos fichiers stockés sur S3. Pour ce faire vous allez saisir la commande suivante `mc cp --recursive [s3/uri] [output/folder]`.  Pour récupérer l'URI de votre objet S3, retournez sur MinIO, ouvrez votre bucket, cliquez sur le fichier à uploader et copier le chemin à gauche de `Create new path` comme expliqué précedemment dans la partie 4 . Pour `output/folder`, vous allez utiliser le répertoire courant avec un `.`. Vous devriez obtenir une commande et une sortie similaire à celle-ci :
 
