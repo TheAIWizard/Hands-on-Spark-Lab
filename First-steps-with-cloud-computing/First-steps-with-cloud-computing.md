@@ -120,15 +120,17 @@ Plusieurs services comme Jupyter offrent la possibilité d'ouvrir un terminal. L
 
 ###  Petite mise en contexte: 
 
-<img src="img/Docker-friends.png" align="left" height="500" width="500" > ![](img/Docker-Symbole.png) 
+![](img/Docker-friends.png) 
 
 Un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolée du reste avec tout ce dont il a besoin pour s’exécuter. 
+
+![](img/Docker-Symbole.png)
 
 ![](img/happy-docker.png)
 
 Notre VS Code est donc isolé des autres services qui ont pu être lancé. 
 
-![](img/isolement-service.png)
+![](img/isolement-service.png) 
 
 Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ ![](img/emoji-world.png) dans l'un, il ne sera pas disponible dans l'autre.
 
