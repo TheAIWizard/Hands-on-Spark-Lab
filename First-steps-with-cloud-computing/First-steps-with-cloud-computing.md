@@ -120,13 +120,25 @@ Plusieurs services comme Jupyter offrent la possibilité d'ouvrir un terminal. L
 
 ###  Petite mise en contexte: 
 
-Un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolé du reste avec tout ce dont il a besoin pour s’exécuter. Notre VS Code est donc isolé des autres services qui ont pu être lancé. 
+![](img/Docker-friends.png)
 
-Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ dans l'un, il ne sera pas disponible dans l'autre.
+Un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolé du reste avec tout ce dont il a besoin pour s’exécuter. 
 
-Comme les services tournent sur le datalab, n'essayez pas de chercher dans vos documents où se trouve les fichiers que vous avez pu créer !
+![](img/happy-docker.png)
+
+Notre VS Code est donc isolé des autres services qui ont pu être lancé. 
+
+![](img/isolement-service.png)
+
+Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ ![](img/emoji-world.png) dans l'un, il ne sera pas disponible dans l'autre.
+
+Comme les services tournent sur le datalab, n'essayez pas de chercher localement dans vos documents où se trouve les fichiers que vous avez pu créer parce qu'il n'y a aucun lien !
+
+![](img/lost-files.png)
 
 Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lancer et gérer plusieurs conteneurs à la volée dans le cloud. C'est ce qui permet à Onyxia de lancer plusieurs services facilement en quelques clicks.
+
+![](img/orchestrateur.png) ![](img/kuberneteslogo.png)
 
 - [ ] Tapez dans le terminal `kubectl get pods`. Caliente ! Vous pouvez voir tous les services en cours de lancement.
 - [ ] Pourquoi pod ? Vous le verrez l'année prochaine mais pour le moment vous pouvez vous dire un pod = un conteneur. Même s'il y a une nuance, c'est souvent le cas en pratique.
