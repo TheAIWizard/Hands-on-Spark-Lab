@@ -142,8 +142,8 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 
 - [ ] Tapez dans le terminal `kubectl get pods`. Caliente ! Vous pouvez voir tous les services en cours de lancement.
 - [ ] Pourquoi pod ? Vous le verrez l'année prochaine mais pour le moment vous pouvez vous dire un pod = un conteneur. Même s'il y a une nuance, c'est souvent le cas en pratique.
-- [ ] Pour les très curieux, `kubectl` comme kube controller: un controller contrôle l'état du cluster en permanence. On peut donc contrôler les services qui tournent dans chaque worker et en particulier avoir les pod d'où `get pods`
-- [ ] Pour les très très curieux qui souhaitent voir sur quels workers les pods tournent: `kubectl get pods -o wide`. Il faudra être patient pour la suite ...
+- [ ] Pour les très curieux, `kubectl` comme kube controller: un controller contrôle l'état du cluster en permanence. On peut donc contrôler les services qui tournent dans chaque worker et en particulier avoir les pods d'où `get pods`
+- [ ] Pour les très très curieux qui souhaitent voir sur quels workers les pods tournent: tapez `kubectl get pods -o wide` et vous verrez une colonne supplémentaire correspondant aux workers. Il faudra être patient pour la suite ...
 
 Avantages: 
   - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: "
