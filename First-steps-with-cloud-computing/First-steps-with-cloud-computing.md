@@ -40,7 +40,7 @@ Mais d'abord, pourquoi parle t-on de Datalab ? Un Datalab est un espace dédié 
 
 Le SSP Cloud est un datalab. Cette plateforme permet aux statisticiens d’utiliser un grand nombre de logiciels de data science dans un environnement informatique ergonomique et performant.
 
-Et Onyxia alors ? Késako ? Onyxia est le nom du projet open source sur lequel est construit le datalab SSP Cloud. Vous pouvez tout à fait créer votre propre Datalab en créant une autre instance d'Onyxia pour votre organisation, entreprise, association, communauté ou une utilisation personnelle par exemple. Quelque part, on parle toujours d'Onyxia.
+Et [Onyxia](https://github.com/InseeFrLab) alors ? Késako ? Onyxia est un projet open-source qui permet de créer des plateformes de data science. Le SSP Cloud en est une instance, hébergée sur les serveurs de l'Insee. Cette instance, dédiée à l'open-data (données non-sensibles), est ouverte à tous les agents publics, et aux écoles de statistique de l'Insee (ENSAI, ENSAE, CEFIL). Vous pouvez tout à fait créer votre propre Datalab en créant une autre instance d'Onyxia pour votre organisation, entreprise, association, communauté ou une utilisation personnelle par exemple, à condition de disposer de ses propres serveurs (précisément d'un cluster kubernetes).
 
 ![](img/datalab.png)
 
@@ -58,9 +58,9 @@ Le système S3 (Simple Storage System) est un système de stockage développé p
 
 **Amazon Simple Storage Service** (S3) est la solution de base que propose AWS pour stocker vos données de manière pérenne. Amazon dit assurer une durabilité de vos données de 99,999999999 %. Cela signifie que si vous stockez 10 000 000 fichiers avec Amazon S3, vous pouvez vous attendre à perdre en moyenne un objet unique une fois tous les 10 000 ans. Assurer votre stockage est payant sur AWS et ce, à coût relativement élevé. :credit_card: :persevere: :coffin:
 
-L'implémentation de S3 est payante mais sa spécification est gratuite ! 
+L'implémentation de S3 est payante mais sa spécification est gratuite et open source ! 
 
-**MinIO** fournit une implementation open source de S3. Vous pouvez donc stocker vos données sur MinIO comme si elles étaient sur S3 et ce, gratuitement. :brain: :money_with_wings: :star_struck:
+**MinIO** fournit une implementation open source de S3. L'INSEE héberge ses propres serveurs et peut donc implémenter ce protocole S3 sans payer de location. Le coût de facturation des serveurs n'est pas à la charge des utilisateurs contrairement à AWS S3. Vous pouvez donc stocker vos données sur MinIO comme si elles étaient sur S3 et ce, "gratuitement". :brain: :money_with_wings: :star_struck:
 
 Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire vers S3 (MinIO) au moment de lancer votre service. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans MinIO. Chaque élément hébergé dans MinIO, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
 
@@ -148,13 +148,16 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 - [ ] Pour les très curieux, `kubectl` comme kube controller: un controller contrôle l'état du cluster en permanence. On peut donc contrôler les services qui tournent dans chaque node(serveur) et en particulier avoir les pods d'où `get pods`
 - [ ] Pour les très très curieux qui souhaitent voir sur quels nodes les pods tournent: tapez `kubectl get pods -o wide` et vous verrez une colonne supplémentaire correspondant aux workers. Il faudra être patient pour la suite ...
 
-Avantages: 
-  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: "
+#### Avantages qui changent la donne : 
+  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: ". Cette qualité est ce qu'on appelle la *reproductibilité*. 
   - Trop smart :point_right: Vous lancez un service pour chaque appli au lieu de tout installer sur une VM et de perdre toute votre installation quand votre VM s'éteindra :yawning_face: 
   - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment contrairement à la VM donc expérimentez au max ! 
 
-Les conteneurs\services ont donc forcément vocation à être éphémères. séparer environnement d'exécution / code / stockage des données.  D'ailleurs, je ne vous l'ai pas dit mais leur durée de vie est de 24 heures environ.
-Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP.
+Morale de l'histoire: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données et c'est ce qu'on a fait jusqu'ici !
+
+Les conteneurs\services ont donc forcément vocation à être éphémères. Le code sera ainsi supprimé à l'extinction du service. Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP. Il faudrait plûtot se rendre [ici](https://github.com/WolfPackStatMathieu/stage-1a/blob/main/vscode_avec_github_tuto/vscode_tuto.md) pour cela.
+
+
 
 ## 8. Jouer avec son service
 
