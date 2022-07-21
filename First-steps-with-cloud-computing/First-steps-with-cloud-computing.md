@@ -132,7 +132,7 @@ Notre VS Code est donc isolé des autres services qui ont pu être lancé.
 
 Exemple: si vous lancez 2 VS Code et que vous installez la librairie _emoji_ ![](img/emoji-world.png) dans l'un, il ne sera pas disponible dans l'autre.
 
-Comme les services tournent sur le datalab, n'essayez pas de chercher localement dans vos documents où se trouve les fichiers que vous avez pu créer parce qu'il n'y a aucun lien !
+Comme les services tournent sur le datalab, n'essayez pas de chercher localement dans vos documents où se trouve les fichiers que vous avez pu créer parce qu'il n'y a aucun lien ! :scream_cat: :clown_face:
 
 ![](img/lost-files.png)
 
@@ -145,7 +145,7 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 
 Avantages: 
   - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment contrairement à la VM donc expérimentez au max !
-  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :/ ça ne marche pas sur ma machine mais chez toi si !" 
+  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: :salt: ça ne marche pas sur ma machine mais chez toi si !" 
 
 Les conteneurs\services ont donc forcément vocation à être éphémères. D'ailleurs, je ne vous l'ai pas dit mais leur durée de vie est de 24 heures environ.
 Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP.
