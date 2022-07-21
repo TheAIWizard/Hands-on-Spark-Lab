@@ -142,10 +142,12 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 
 - [ ] Tapez dans le terminal `kubectl get pods`. Caliente ! Vous pouvez voir tous les services en cours de lancement.
 - [ ] Pourquoi pod ? Vous le verrez l'année prochaine mais pour le moment vous pouvez vous dire un pod = un conteneur. Même s'il y a une nuance, c'est souvent le cas en pratique.
+- [ ] Pour les très curieux, `kubectl` comme kube controller: il contrôle l'état du cluster en permanence. On peut donc contrôler les services qui tournent dans chaque worker. 
+- [ ] Pour les très très curieux qui souhaitent voir sur quels workers les pods tournent: `kubectl get pods -o wide`. Il faudra être patient pour la suite ...
 
 Avantages: 
-  - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment contrairement à la VM donc expérimentez au max !
   - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: " 
+  - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment contrairement à la VM donc expérimentez au max ! Vous lancez un service pour chaque appli au lieu de tout installer sur une VM et de perdre toute votre installation quand votre VM s'éteindra :yawning_face:
 
 Les conteneurs\services ont donc forcément vocation à être éphémères. D'ailleurs, je ne vous l'ai pas dit mais leur durée de vie est de 24 heures environ.
 Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP.
