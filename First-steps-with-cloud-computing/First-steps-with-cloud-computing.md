@@ -2,9 +2,9 @@
 
 - [TP 0 — Partie 1: Découverte d'Onyxia et de son datalab SSP Cloud](#tp-0---partie-1--d-couverte-d-onyxia-et-de-son-datalab-ssp-cloud)
   * [Objectifs](#objectifs)
-  * [1. Création d'un compte sur le SSP Cloud d'Onyxia](#1-création-d'un-compte-sur-le-ssp-cloud-d'onyxia)
+  * [1. Création d'un compte sur le SSP Cloud d'Onyxia](#1-création-dun-compte-sur-le-ssp-cloud-donyxia)
   * [2. Exploration](#2-exploration)
-  * [3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)](#3-acc-s---votre-espace-de-stockage-minio---l-alternative-open-source---amazon-simple-storage-service--s3-)
+  * [3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)](#3-accès-à-votre-espace-de-stockage-minio---lalternative-open-source-à-amazon-simple-storage-service--s3-)
   * [4. Copie des données dans votre espace de stockage](#4-copie-des-donn-es-dans-votre-espace-de-stockage)
   * [5. Lancement d'un service](#5-lancement-dun-service)
   * [7. Ouvrir un terminal sur son service](#7-ouvrir-un-terminal-sur-son-service)
