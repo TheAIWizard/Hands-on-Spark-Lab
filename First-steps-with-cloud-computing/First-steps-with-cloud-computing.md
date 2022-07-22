@@ -2,7 +2,7 @@
 
 - [TP 0 — Partie 1: Découverte d'Onyxia et de son datalab SSP Cloud](#tp-0---partie-1--d-couverte-d-onyxia-et-de-son-datalab-ssp-cloud)
   * [Objectifs](#objectifs)
-  * [1. Création d'un compte sur le SSP Cloud d'Onyxia](#1-cr-ation-d-un-compte-sur-le-ssp-cloud-d-onyxia)
+  * [1. Création d'un compte sur le SSP Cloud d'Onyxia](#1-création-d'un-compte-sur-le-ssp-cloud-d'onyxia)
   * [2. Exploration](#2-exploration)
   * [3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)](#3-acc-s---votre-espace-de-stockage-minio---l-alternative-open-source---amazon-simple-storage-service--s3-)
   * [4. Copie des données dans votre espace de stockage](#4-copie-des-donn-es-dans-votre-espace-de-stockage)
@@ -14,7 +14,7 @@
     + [8.1 Mise en place des fichiers du TP](#81-mise-en-place-des-fichiers-du-tp)
     + [8.2 Benchmark des langages](#82-benchmark-des-langages)
   * [9. Eteindre son service](#9-eteindre-son-service)
-  
+
 ## Objectifs
 
 Dans un premier temps, ce TP a pour but de prendre en main l'interface du datalab [SSP Cloud](https://datalab.sspcloud.fr/home), une instance du logiciel open source [Onyxia](https://github.com/InseeFrLab). Puis, de vous représenter globalement, en toute simplicité, le contexte Spark. Qu'est ce qui se passe quand j'utilise Spark ? C'est quoi déjà ? Qu'est ce que je peux faire avec ? En quoi c'est stylé ? Bon allez, c'est parti on y va !
