@@ -12,7 +12,7 @@
     + [7.2 Le terminal, un outil pour gérer ses services en ligne de commande](#72-le-terminal-un-outil-pour-gérer-ses-services-en-ligne-de-commande)
       - [Petite mise en contexte:](#721-petite-mise-en-contexte-)
       - [Superviser des services d'Onyxia](#722-superviser-des-services-donyxia)
-      - [Avantages qui changent la donne:](#723-avantages-qui-changent-la-donne-)
+      - [Des avantages qui changent beaucoup la donne:](#723-des-avantages-qui-changent-beaucoup-la-donne-)
     
       
   * [8. Jouer avec son service](#8-jouer-avec-son-service)
@@ -179,15 +179,14 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 - [ ] Pour les très curieux, `kubectl` comme kube controller: un controller contrôle l'état du cluster en permanence. On peut donc contrôler les services qui tournent dans chaque node(serveur) et en particulier avoir les pods d'où `get pods`
 - [ ] Pour les très très curieux qui souhaitent voir sur quels nodes les pods tournent: tapez `kubectl get pods -o wide` et vous verrez une colonne supplémentaire correspondant aux workers. Il faudra être patient pour la suite ...
 
-#### 7.2.3 Avantages qui changent la donne : 
+#### 7.2.3 Des avantages qui changent beaucoup la donne: 
 
   - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: ". C'est ce qu'on appelle la *reproductibilité*. Votre code est indépendant de l'environnement d'éxécution et vous n'avez besoin de rien installer ou désinstaller de plus pour éxécuter le code de quelqu'un. 
   - *Portabilité* :point_right: Votre code peut s'éxécuter sur tout type de machines différentes avec les ressources suffisantes. 
-  - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment (parce que vous avez séparé le code de l'environnement d'éxécution) contrairement à la VM donc expérimentez au max ! 
-  - *Scalabilité* :point_right:  
+  - *Sans Pitié* :pirate_flag: :rat: Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment (parce que vous avez séparé le code de l'environnement d'éxécution) contrairement à la VM donc expérimentez au max ! 
+  - Et bien d'autres encores comme la *scalabilité* mais qui ne nous concerne pas encore à ce stade.
    
 Les conteneurs\services ont donc forcément vocation à être éphémères. Le code sera ainsi supprimé à l'extinction du service. Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP. Il faudrait plûtot se rendre [ici](https://github.com/WolfPackStatMathieu/stage-1a/blob/main/vscode_avec_github_tuto/vscode_tuto.md) pour cela.
-
 
 
 ## 8. Jouer avec son service
