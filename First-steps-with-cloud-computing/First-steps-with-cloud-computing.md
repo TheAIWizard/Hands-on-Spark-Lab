@@ -4,7 +4,7 @@
   * [Objectifs](#objectifs)
   * [1. Création d'un compte sur le SSP Cloud d'Onyxia](#1-création-dun-compte-sur-le-ssp-cloud-donyxia)
   * [2. Exploration](#2-exploration)
-  * [3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)](#3-accèsvotre-espace-de-stockage-miniolalternative-open-sourceamazon-simple-storage-service-s3)
+  * [3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)](#3-accs--votre-espace-de-stockage-minio--lalternative-open-source--amazon-simple-storage-service-s3)
   * [4. Copie des données dans votre espace de stockage](#4-copie-des-données-dans-votre-espace-de-stockage)
   * [5. Lancement d'un service](#5-lancement-dun-service)
   * [7. Le terminal, un outil bien pratique](#7-le-terminal-un-outil-bien-pratique)
