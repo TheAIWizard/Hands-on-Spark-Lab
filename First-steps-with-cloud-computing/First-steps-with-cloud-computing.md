@@ -14,7 +14,6 @@ Pendant ce TP vous allez :
 - Exécuter différentes commandes de base 
   - `ls` pour lister les documents dans un dossier
   - `cd` pour change directory pour naviguer dans une arborescence de fichiers
-  - `yum` pour installer un package
   - `mc cp` pour copier des fichiers depuis un bucket MinIO (S3)
   - `chmod` pour changer les permissions d'un fichier
   - `time [commande]` pour mesurer la temps d'exécution d'une commande
@@ -111,17 +110,25 @@ https://user-images.githubusercontent.com/37664429/179776774-0e4b779f-a841-4269-
 - [ ] Félicitations ! Votre service est en cours de lancement. Si vous avez oubliez le mot de passe de votre service, pas de panique à bord ! Vous pouvez toujours retourner dans `Mes services` et cliquer sur `copier le mot de passe`.
 
 ## 7. Ouvrir un terminal sur son service
-on vient d'ouvrir rstudio, en pratique plusieurs langages donc vscode 
-- [ ] Lancez un service VS Code en configurant dans l'option `Configuration VS Code > Kubernetes`, **admin** comme Role.
-custom image aiflowzone/onyxia-vs-code-python-r:0.1
 
-Plusieurs services comme Jupyter offrent la possibilité d'ouvrir un terminal. Le plus commode est de lancer un service VS Code et d'ouvrir un terminal comme suit:
+Nous venons d'apprendre à lancer un service Rstudio et nous pouvons y ouvrir un terminal. Toutefois, il est courant d'utiliser plusieurs langages. Nous allons donc plutôt opter pour un service VS Code.
+
+- [ ] Choisir le service VS Code dans le catalogue des services en configurant dans l'option `Configuration VS Code > Kubernetes`, **admin** comme Role.
+- [ ] Se rendre dans `Configuration VS Code`
+- [ ] Dans l'onglet `Kubernetes`, choisir **admin** comme rôle 
+- [ ] Dans l'onglet `Security`, décochez _Enable IP protection_
+- [ ] Dans l'onglet `Service`, cochez _Custom image_ et dans _Version_, renseignez aiflowzone/onyxia-vs-code-python-r:0.1
+
+R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'installer R en ligne de commande sur votre service, il est préférable de fixer l'environnement d'éxécution de votre service. Et c'est bien ce qu'on fait en renseignant cette image qui permet d'avoir un VS Code avec tout ce dont vous avez besoin de pré-installé pour ce TP d'introduction (R, cython, java, C, ...)
+
+Conseil de bonne pratique: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.
+Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres avantages que nous verrons à la fin de cete section.
+
+- [ ] Et bien on peut y aller ! :fire: Vous pouvez `Lancer` votre service :comet:
 
 ![](img/terminal_vscode.png)
 
 ###  Petite mise en contexte: 
-
-
 
 ![](img/Docker-friends.png)
 
@@ -149,12 +156,12 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 - [ ] Pour les très très curieux qui souhaitent voir sur quels nodes les pods tournent: tapez `kubectl get pods -o wide` et vous verrez une colonne supplémentaire correspondant aux workers. Il faudra être patient pour la suite ...
 
 #### Avantages qui changent la donne : 
-  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: ". Cette qualité est ce qu'on appelle la *reproductibilité*. 
-  - Trop smart :point_right: Vous lancez un service pour chaque appli au lieu de tout installer sur une VM et de perdre toute votre installation quand votre VM s'éteindra :yawning_face: 
-  - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment contrairement à la VM donc expérimentez au max ! 
 
-Morale de l'histoire: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données et c'est ce qu'on a fait jusqu'ici !
-
+  - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: ". C'est ce qu'on appelle la *reproductibilité*. Votre code est indépendant de l'environnement d'éxécution et vous n'avez besoin de rien installer ou désinstaller de plus pour éxécuter le code de quelqu'un. 
+  - *Portabilité* :point_right: Votre code peut s'éxécuter sur tout type de machines différentes avec les ressources suffisantes. 
+  - Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment (parce que vous avez séparé le code de l'environnement d'éxécution) contrairement à la VM donc expérimentez au max ! 
+  - *Scalabilité* :point_right:  
+   
 Les conteneurs\services ont donc forcément vocation à être éphémères. Le code sera ainsi supprimé à l'extinction du service. Si vous codez dessus, une bonne pratique est de déposer son code sur git mais ce n'est pas le sujet de ce TP. Il faudrait plûtot se rendre [ici](https://github.com/WolfPackStatMathieu/stage-1a/blob/main/vscode_avec_github_tuto/vscode_tuto.md) pour cela.
 
 
@@ -164,8 +171,7 @@ Les conteneurs\services ont donc forcément vocation à être éphémères. Le c
 Le but de cette section est de vous faire manipuler quelques commandes de base en bash et de reproduire un benchmark des langages comme fait en cours. Vous allez :
 
 1. Récupérer tous les fichiers nécessaires au benchmark
-2. Installer R et un package pour python
-3. Réaliser le benchmark.
+2. Réaliser le benchmark.
 
 Pour rappel ce benchmark se base sur le calcul de la température max annuelle à partir des données météo étatsunienne. Chaque fichier contient les données d'une année, avec chaque ligne contenant les données d'une mesure. Les différents programmes font tous la même chose, ils lisent les fichiers pour extraire la température maximum et l'afficher. Mais chaque langage à ses spécificités :
 
@@ -197,18 +203,6 @@ Vous vous rappelez de ce fameux fichier TP0 disponible sur notre bon vieux Moodl
 
 - [ ] Maintenant que vous avez vos fichiers, vous allez exécuter le script `get_data.sh`. Pour ce faire tapez `./get_data.sh`.  Ce script va récupérer les fichier depuis les serveurs de la NOAA (= météo France étatsunienne) et les mettre en forme pour le TP.
 
-### 8.2 Installer R et un package python
-
-La machine virtuelle que vous avez crée ne dispose pas tous les programmes nécessaires au benchmark.
-
-- [ ] **Installation de python-dev** : `python-devel` est nécessaire pour créez des extension python. Pour l'installer, vous allez utiliser `yum`, un gestionnaire de packages pour certaines distributions linux (un équivalent au `apt` d'ubuntu). La commande à utiliser est `sudo yum install -y python3-devel.x86_64` (`sudo` pour dire que vous exécuter la commande en super user, `yum` pour dire que vous utiliser le gestionnaire de package, `install` pour dire que vous voulez installez un package, `-y` pour valider l'installation, et `python3-devel.x86_64` le nom du package)
-  - [ ] Installez `Cython` avec `pip3 ` et compilez le code cython en faisant :
-    - [ ] `cd cythond_code` pour *change directory* qui permet de se déplacer dans votre arborescence
-    - [ ] `python3 setup.py` pour lancer la compilation
-    - [ ] `cd ../` pour retourner dans la dossier parent.
-
-- [ ] **Installation de R** : pour l'installer R vous allez utiliser le gestionnaire de package d'amazon `amazon-linux-extras`,  avec la ligne de commande suivante : `sudo amazon-linux-extras install R4 -y`.  Le terminal va se remplir de texte pendant quelques minutes n'y prêtez pas attention, c'est juste la machine qui vous dit ce qu'elle fait. 
-
 ### 8.2 Benchmark des langages
 
 Dans cette partie vous allez reproduire l'expérience du cours consistant à tester la vitesse de traitement de différents langages. Cela va se faire essentiellement avec la commande `time`. La commande `time` permet de mesurer la temps d'exécution d'une commande passer en argument. Exemple `time chmod 764 get_data.sh` permet de mesurez le temps nécessaire pour pour changer les permission du fichier get_data.sh. Notez chacun des résultats et vérifiez qu'ils sont cohérents avec ceux du cours. Si ce n'est pas les cas, essayez de comprendre pourquoi.
@@ -217,17 +211,6 @@ Dans cette partie vous allez reproduire l'expérience du cours consistant à tes
 - [ ] Pour lancer le code java compilé en jar vous devez utiliser la commande `time java -jar [file.jar]`
 - [ ] Pour les codes python utilisez la commande `time python3 [file.py]`
 - [ ] Pour lancer un script R vous devez saisir `time Rscript [filename.R]` dans votre terminal.
-
-### 8.3 Un shell dans le navigateur
-
-- [ ] Fermez votre terminal et retournez sur la page de votre instance EC2. Nous allons maintenant nous y connecter via un *cloud shell*. Pour ce faire cliquez sur `Se connecter`
-  ![](img/ec2_se_connecter.png)
-  Vous allez arriver sur une page similaire à celle ci-dessous. Cliquez sur `Se connecter`
-  ![](img/ec2_se_connecter 2.png)
-  Après quelques instants vous allez arriver sur votre *cloud shell*
-- [ ] ![](img/cloud_shell.png)
-
-Depuis cette écran vous êtes connecté à votre machine distante. Par exemple tapez la commande suivante `ls` pour voir que vous avez bien vos fichiers, puis tentez de les réexécuter.
 
 ## 9. Eteindre son service
 
