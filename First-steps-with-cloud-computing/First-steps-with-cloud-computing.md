@@ -19,7 +19,7 @@
     + [8.1 Mise en place des fichiers du TP](#81-mise-en-place-des-fichiers-du-tp)
     + [8.2 Benchmark des langages](#82-benchmark-des-langages)
   * [9. Eteindre son service](#9-eteindre-son-service)
-  * [10. Et si on recommence ?](#9-et-si-on-recommence-?)
+  * [10. Et si on recommence ?](#9-et-si-on-recommence-)
 
 ## Objectifs
 
