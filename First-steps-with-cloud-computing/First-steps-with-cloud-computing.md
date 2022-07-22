@@ -6,7 +6,7 @@
   * [2. Exploration](#2-exploration)
   * [3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)](#3-acc-s---votre-espace-de-stockage-minio---l-alternative-open-source---amazon-simple-storage-service--s3-)
   * [4. Copie des données dans votre espace de stockage](#4-copie-des-donn-es-dans-votre-espace-de-stockage)
-  * [5. Lancement d'un service](#5-lancement-d-un-service)
+  * [5. Lancement d'un service](#5-lancement-d'un-service)
   * [7. Ouvrir un terminal sur son service](#7-ouvrir-un-terminal-sur-son-service)
     + [Petite mise en contexte:](#petite-mise-en-contexte-)
       - [Avantages qui changent la donne :](#avantages-qui-changent-la-donne--)
