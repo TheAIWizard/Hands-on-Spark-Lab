@@ -1,8 +1,8 @@
 # Spark courses on Onyxia           ![](First-steps-with-cloud-computing/img/Onyxia.png)  
 ![](First-steps-with-cloud-computing/img/Apache_Spark_logo.png)  ![](First-steps-with-cloud-computing/img/kuberneteslogo.png)
 
-This repo host the interactive Spark courses powered by the SSP Cloud Data Lab. These tutorials are aimed at the 2nd year student at E.N.S.A.I.
-Click on the [Lab 1,2,3](https://github.com/TheAIWizard/Hands-on-Spark-Lab){: .btn} link below to launch a jupyter notebook according to your level of ability
+This repo hosts the interactive Spark courses powered by the SSP Cloud Data Lab. These tutorials are aimed at the 2nd year students at E.N.S.A.I.
+Click on the [Lab 1,2,3](https://github.com/TheAIWizard/Hands-on-Spark-Lab) link below to launch a jupyter notebook according to your level of ability
 
 Take your time and first enjoy cloud computing experience with Onyxia by attending [Lab 0](https://github.com/TheAIWizard/Hands-on-Spark-Lab/blob/main/First-steps-with-cloud-computing/First-steps-with-cloud-computing.md) :seat:
 
