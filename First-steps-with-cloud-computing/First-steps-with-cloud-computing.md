@@ -141,7 +141,9 @@ Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreu
 
 ![](img/terminal_vscode.png)
 
-###  Petite mise en contexte: 
+### 7.1 Le terminal, un outil pour gérer ses services en ligne de commande
+
+#### 7.1.1 Petite mise en contexte: 
 
 ![](img/Docker-friends.png)
 
@@ -159,6 +161,8 @@ Comme les services tournent sur le datalab, n'essayez pas de chercher localement
 
 ![](img/lost-files.png)
 
+#### 7.1.2 Superviser des services d'Onyxia
+
 Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lancer et gérer plusieurs conteneurs à la volée dans le cloud. C'est ce qui permet à Onyxia de lancer plusieurs services facilement en quelques clicks. Un cluster kubernetes est donc un cluster qui répartit les services que vous voyez sur le datalab dans les différentes machines ou "workers" du cluster.
 
 ![](img/orchestrateur.png) ![](img/kuberneteslogo.png)
@@ -168,7 +172,7 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 - [ ] Pour les très curieux, `kubectl` comme kube controller: un controller contrôle l'état du cluster en permanence. On peut donc contrôler les services qui tournent dans chaque node(serveur) et en particulier avoir les pods d'où `get pods`
 - [ ] Pour les très très curieux qui souhaitent voir sur quels nodes les pods tournent: tapez `kubectl get pods -o wide` et vous verrez une colonne supplémentaire correspondant aux workers. Il faudra être patient pour la suite ...
 
-#### Avantages qui changent la donne : 
+#### 7.1.2 Avantages qui changent la donne : 
 
   - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: ". C'est ce qu'on appelle la *reproductibilité*. Votre code est indépendant de l'environnement d'éxécution et vous n'avez besoin de rien installer ou désinstaller de plus pour éxécuter le code de quelqu'un. 
   - *Portabilité* :point_right: Votre code peut s'éxécuter sur tout type de machines différentes avec les ressources suffisantes. 
