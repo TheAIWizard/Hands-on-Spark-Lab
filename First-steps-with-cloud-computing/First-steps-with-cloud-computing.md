@@ -19,6 +19,7 @@
     + [8.1 Mise en place des fichiers du TP](#81-mise-en-place-des-fichiers-du-tp)
     + [8.2 Benchmark des langages](#82-benchmark-des-langages)
   * [9. Eteindre son service](#9-eteindre-son-service)
+  * [10. Et si on recommançait ?](#9-et-si-on-recommanait)
 
 ## Objectifs
 
@@ -242,7 +243,7 @@ Une fois le taff fait, n'oubliez pas d'éteindre vos services ! **Pour ne pas ga
 Pour éteindre votre service, allez sur l'onglet `Mes services`. Vous pouvez éteindre à tout moment, le service que vous souhaitez à coup de click sur l'icône poubelle.
 - [ ] ![](img/arret_service.png)
 
-## 10. Le chemin des braves 
+## 10. Et si on recommançait ?
 
 [Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile)
 
