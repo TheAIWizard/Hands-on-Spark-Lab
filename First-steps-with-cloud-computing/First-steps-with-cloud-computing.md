@@ -245,6 +245,8 @@ Pour éteindre votre service, allez sur l'onglet `Mes services`. Vous pouvez ét
 
 ## 10. Et si on recommançait ?
 
+![giphy](https://user-images.githubusercontent.com/37664429/180465265-b7794cd0-d3e4-4064-a868-5a563e5adbb3.gif)
+
 [Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile)
 
 
