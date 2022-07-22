@@ -7,9 +7,14 @@
   * [3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)](#3-accès-à-votre-espace-de-stockage-minio---lalternative-open-source-à-amazon-simple-storage-service--s3-)
   * [4. Copie des données dans votre espace de stockage](#4-copie-des-données-dans-votre-espace-de-stockage)
   * [5. Lancement d'un service](#5-lancement-dun-service)
-  * [7. Ouvrir un terminal sur son service](#7-ouvrir-un-terminal-sur-son-service)
-    + [Petite mise en contexte:](#petite-mise-en-contexte-)
-      - [Avantages qui changent la donne :](#avantages-qui-changent-la-donne--)
+  * [7. Le terminal, un outil bien pratique](#7-le-terminal-un-outil-bien-pratique)
+    + [7.1 Ouvrir un terminal sur son service](#71-ouvrir-un-terminal-sur-son-service)
+    + [7.2 Le terminal, un outil pour gérer ses services en ligne de commande](#72-le-terminal-un-outil-pour-gérer-ses-services-en-ligne-de-commande)
+      - [Petite mise en contexte:](#721-petite-mise-en-contexte-)
+      - [Superviser des services d'Onyxia](#722-superviser-des-services-donyxia)
+      - [Avantages qui changent la donne:](#723-avantages-qui-changent-la-donne-)
+    
+      
   * [8. Jouer avec son service](#8-jouer-avec-son-service)
     + [8.1 Mise en place des fichiers du TP](#81-mise-en-place-des-fichiers-du-tp)
     + [8.2 Benchmark des langages](#82-benchmark-des-langages)
@@ -122,7 +127,9 @@ https://user-images.githubusercontent.com/37664429/179776774-0e4b779f-a841-4269-
 
 - [ ] Félicitations ! Votre service est en cours de lancement. Si vous avez oubliez le mot de passe de votre service, pas de panique à bord ! Vous pouvez toujours retourner dans `Mes services` et cliquer sur `copier le mot de passe`.
 
-## 7. Ouvrir un terminal sur son service
+## 7. Le terminal, un outil bien pratique
+
+### 7.1 Ouvrir un terminal sur son service
 
 Nous venons d'apprendre à lancer un service Rstudio et nous pouvons y ouvrir un terminal. Toutefois, il est courant d'utiliser plusieurs langages. Nous allons donc plutôt opter pour un service VS Code.
 
@@ -141,9 +148,9 @@ Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreu
 
 ![](img/terminal_vscode.png)
 
-### 7.1 Le terminal, un outil pour gérer ses services en ligne de commande
+### 7.2 Le terminal, un outil pour gérer ses services en ligne de commande
 
-#### 7.1.1 Petite mise en contexte: 
+#### 7.2.1 Petite mise en contexte: 
 
 ![](img/Docker-friends.png)
 
@@ -161,7 +168,7 @@ Comme les services tournent sur le datalab, n'essayez pas de chercher localement
 
 ![](img/lost-files.png)
 
-#### 7.1.2 Superviser des services d'Onyxia
+#### 7.2.2 Superviser des services d'Onyxia
 
 Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lancer et gérer plusieurs conteneurs à la volée dans le cloud. C'est ce qui permet à Onyxia de lancer plusieurs services facilement en quelques clicks. Un cluster kubernetes est donc un cluster qui répartit les services que vous voyez sur le datalab dans les différentes machines ou "workers" du cluster.
 
@@ -172,7 +179,7 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 - [ ] Pour les très curieux, `kubectl` comme kube controller: un controller contrôle l'état du cluster en permanence. On peut donc contrôler les services qui tournent dans chaque node(serveur) et en particulier avoir les pods d'où `get pods`
 - [ ] Pour les très très curieux qui souhaitent voir sur quels nodes les pods tournent: tapez `kubectl get pods -o wide` et vous verrez une colonne supplémentaire correspondant aux workers. Il faudra être patient pour la suite ...
 
-#### 7.1.2 Avantages qui changent la donne : 
+#### 7.2.3 Avantages qui changent la donne : 
 
   - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: ". C'est ce qu'on appelle la *reproductibilité*. Votre code est indépendant de l'environnement d'éxécution et vous n'avez besoin de rien installer ou désinstaller de plus pour éxécuter le code de quelqu'un. 
   - *Portabilité* :point_right: Votre code peut s'éxécuter sur tout type de machines différentes avec les ressources suffisantes. 
