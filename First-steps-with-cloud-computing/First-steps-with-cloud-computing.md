@@ -242,6 +242,10 @@ Une fois le taff fait, n'oubliez pas d'éteindre vos services ! **Pour ne pas ga
 Pour éteindre votre service, allez sur l'onglet `Mes services`. Vous pouvez éteindre à tout moment, le service que vous souhaitez à coup de click sur l'icône poubelle.
 - [ ] ![](img/arret_service.png)
 
+## 10. Le chemin des braves 
+
+[Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile)
+
 
 ## Author
 - [Nathan Randriamanana](https://github.com/TheAIWizard)
