@@ -12,7 +12,7 @@
     + [7.2 Le terminal, un outil pour gérer ses services en ligne de commande](#72-le-terminal-un-outil-pour-gérer-ses-services-en-ligne-de-commande)
       - [Petite mise en contexte:](#721-petite-mise-en-contexte-)
       - [Superviser des services d'Onyxia](#722-superviser-des-services-donyxia)
-      - [Des avantages qui changent beaucoup la donne:](#723-des-avantages-qui-changent-beaucoup-la-donne-)
+      - [Des avantages qui changent beaucoup la donne:](#723-des-avantages-qui-changent-beaucoup-la-donne:)
     
       
   * [8. Jouer avec son service](#8-jouer-avec-son-service)
