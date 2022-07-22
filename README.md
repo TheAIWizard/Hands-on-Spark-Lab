@@ -2,9 +2,11 @@
 ![](First-steps-with-cloud-computing/img/Apache_Spark_logo.png)  ![](First-steps-with-cloud-computing/img/kuberneteslogo.png)
 
 This repo hosts the interactive Spark courses powered by the SSP Cloud Data Lab. These tutorials are aimed at the 2nd year students at E.N.S.A.I.
-Click on the [Lab 1,2,3](https://github.com/TheAIWizard/Hands-on-Spark-Lab) link below to launch a jupyter notebook according to your level of ability
+Click on the [Lab 1,2,3](# Spark tutorials) link below to launch a jupyter notebook according to your level of ability
 
 Take your time and first enjoy cloud computing experience with Onyxia by attending [Lab 0](https://github.com/TheAIWizard/Hands-on-Spark-Lab/blob/main/First-steps-with-cloud-computing/First-steps-with-cloud-computing.md) :seat:
+
+# Spark tutorials
 
 ## Launch [Lab 1](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_1.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true) :flight_departure:
 
