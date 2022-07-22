@@ -17,7 +17,8 @@
       
   * [8. Jouer avec son service](#8-jouer-avec-son-service)
     + [8.1 Mise en place des fichiers du TP](#81-mise-en-place-des-fichiers-du-tp)
-    + [8.2 Benchmark des langages](#82-benchmark-des-langages)
+    + [8.2 Installer R et un package python](#82-installer-r-et-un-package-python)
+    + [8.3 Benchmark des langages](#83-benchmark-des-langages)
   * [9. Eteindre son service](#9-eteindre-son-service)
   * [10. Et si on recommence ?](#10-et-si-on-recommence-)
 
@@ -33,6 +34,7 @@ Pendant ce TP vous allez :
 - Exécuter différentes commandes de base 
   - `ls` pour lister les documents dans un dossier
   - `cd` pour change directory pour naviguer dans une arborescence de fichiers
+  - `apt-get` pour installer un package
   - `mc cp` pour copier des fichiers depuis un bucket MinIO (S3)
   - `chmod` pour changer les permissions d'un fichier
   - `time [commande]` pour mesurer la temps d'exécution d'une commande
@@ -227,7 +229,19 @@ Vous vous rappelez de ce fameux fichier TP0 disponible sur notre bon vieux Moodl
 
 - [ ] Maintenant que vous avez vos fichiers, vous allez exécuter le script `get_data.sh`. Pour ce faire tapez `./get_data.sh`.  Ce script va récupérer les fichier depuis les serveurs de la NOAA (= météo France étatsunienne) et les mettre en forme pour le TP.
 
-### 8.2 Benchmark des langages
+### 8.2 Installer R et un package python
+
+La machine virtuelle que vous avez crée ne dispose pas tous les programmes nécessaires au benchmark.
+
+- [ ] **Installation de python-dev** : `openjdk` est nécessaire pour éxécuter du code compilé en Java. Pour l'installer, vous allez utiliser `apt-get`, un gestionnaire de packages avancé. La commande à utiliser est `sudo apt-get install -y openjdk-11-jre-headless` (`sudo` pour dire que vous exécuter la commande en super user, `apt-get` pour dire que vous utiliser le gestionnaire de package, `install` pour dire que vous voulez installez un package, `-y` pour valider l'installation, et `openjdk-11-jre-headless` le nom du package)
+  - [ ] Installez `Cython` avec `pip3 ` et compilez le code cython en faisant :
+    - [ ] `cd cythond_code` pour *change directory* qui permet de se déplacer dans votre arborescence
+    - [ ] `python3 setup.py` pour lancer la compilation
+    - [ ] `cd ../` pour retourner dans la dossier parent.
+
+- [ ] **Installation de R** : pour installer R vous allez aussi utiliser le gestionnaire de package `apt-get`,  avec la ligne de commande suivante : `sudo apt-get install -y r-base`.  Le terminal va se remplir de texte pendant quelques minutes n'y prêtez pas attention, c'est juste la machine qui vous dit ce qu'elle fait. 
+
+### 8.3 Benchmark des langages
 
 Dans cette partie vous allez reproduire l'expérience du cours consistant à tester la vitesse de traitement de différents langages. Cela va se faire essentiellement avec la commande `time`. La commande `time` permet de mesurer la temps d'exécution d'une commande passer en argument. Exemple `time chmod 764 get_data.sh` permet de mesurez le temps nécessaire pour pour changer les permission du fichier get_data.sh. Notez chacun des résultats et vérifiez qu'ils sont cohérents avec ceux du cours. Si ce n'est pas les cas, essayez de comprendre pourquoi.
 
