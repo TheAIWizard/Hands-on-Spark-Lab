@@ -19,7 +19,7 @@
     + [8.1 Mise en place des fichiers du TP](#81-mise-en-place-des-fichiers-du-tp)
     + [8.2 Benchmark des langages](#82-benchmark-des-langages)
   * [9. Eteindre son service](#9-eteindre-son-service)
-  * [10. Et si on recommançait ?](#9-et-si-on-recommanait)
+  * [10. Et si on recommance ?](#9-et-si-on-recommence-)
 
 ## Objectifs
 
@@ -243,7 +243,7 @@ Une fois le taff fait, n'oubliez pas d'éteindre vos services ! **Pour ne pas ga
 Pour éteindre votre service, allez sur l'onglet `Mes services`. Vous pouvez éteindre à tout moment, le service que vous souhaitez à coup de click sur l'icône poubelle.
 - [ ] ![](img/arret_service.png)
 
-## 10. Et si on recommançait ?
+## 10. Et si on recommence ?
 
 ![giphy](https://user-images.githubusercontent.com/37664429/180465265-b7794cd0-d3e4-4064-a868-5a563e5adbb3.gif)
 
