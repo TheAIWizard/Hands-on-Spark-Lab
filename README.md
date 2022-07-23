@@ -10,12 +10,14 @@ Take your time and first enjoy cloud computing experience with Onyxia by attendi
 
 Welcome to this tutorial folks :rainbow: 
 We are hoping that you'll develop some serious data science skills :fire::fire::fire:  and enjoy this experience with the SSP Cloud Data Lab supported by [Onyxia](https://github.com/InseeFrLab/onyxia-web) . :sparkles:
+![136545513-f623d8c7-260d-4d93-a01e-2dc5af6ad473](https://user-images.githubusercontent.com/37664429/180615611-708972a5-0d61-480b-9e93-4f1c87005168.gif)
 
 # Prerequesites
 
 You'll have to create an account on the [Data Lab](https://datalab.sspcloud.fr/home) first to be able to launch the courses and access the Jupyter notebooks.
 
 Users can create their own accounts and authenticate with their own credentials.
+[authentification_ssplab.webm](https://user-images.githubusercontent.com/37664429/180615509-9606c69f-47ab-46b6-897b-839788b5bc64.webm)
 
 # Spark tutorials
 
