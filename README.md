@@ -9,7 +9,7 @@ Scroll to the bottom until you reach the [Spark tutorials](#spark-tutorials) sec
 Welcome to this tutorial folks :rainbow: 
 We are hoping that you'll develop some serious data science skills :fire::fire::fire:  and enjoy this experience with the SSP Cloud Data Lab supported by [Onyxia](https://github.com/InseeFrLab/onyxia-web) . :sparkles:
 
-[![]([https://user-images.githubusercontent.com/37664429/180615611-708972a5-0d61-480b-9e93-4f1c87005168.gif)](https://datalab.sspcloud.fr/catalog/inseefrlab-helm-charts-datascience)
+[![](https://user-images.githubusercontent.com/37664429/180615611-708972a5-0d61-480b-9e93-4f1c87005168.gif)](https://datalab.sspcloud.fr/catalog/inseefrlab-helm-charts-datascience)
 
 Take your time and first enjoy cloud computing experience with Onyxia by attending [Lab 0](https://github.com/TheAIWizard/Hands-on-Spark-Lab/blob/main/First-steps-with-cloud-computing/First-steps-with-cloud-computing.md) :point_left::seat: 
 
