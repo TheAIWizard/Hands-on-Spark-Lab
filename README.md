@@ -26,7 +26,7 @@ https://user-images.githubusercontent.com/37664429/180615802-7698ee0e-0386-44dc-
 ## Launch Lab 1 [:flight_departure:](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_1.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true) 
 
 In this interactive course, you'll learn the first steps of Spark as an end user of Onyxia.
-Tap the airplane for your first launch on Spark ! It's time to discover the world of Spark :sparkling_heart: :world_map:
+Tap the airplane for your first launch ! It's time to discover the world of Spark :sparkling_heart: :world_map:
 
 ## Launch Lab 2 [:cyclone:](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_2.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true) 
 
