@@ -155,6 +155,9 @@ Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreu
 
 #### 7.2.1 Petite mise en contexte: 
 
+C'est l'heure des présentations ! :drum: la sympatique pieuvre à gauche, c'est Kubernetes :octopus:. La gentille baleine bleue à droite, c'est Docker :whale:
+En plus d'être sympa, vous vous sentirez davantage en sécurité avec eux qu'avec une VM ...
+
 ![](img/Docker-friends.png)
 
 Un service est en fait un conteneur ou un conteneur Docker pour les plus intimes c'est-à-dire que le service enveloppe l’application d’un logiciel dans une boîte invisible isolée du reste avec tout ce dont il a besoin pour s’exécuter. 
