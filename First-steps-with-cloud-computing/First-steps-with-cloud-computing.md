@@ -155,8 +155,8 @@ Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreu
 
 #### 7.2.1 Petite mise en contexte: 
 
-C'est l'heure des présentations ! :drum: la sympatique pieuvre à gauche, c'est Kubernetes :octopus:. La gentille baleine bleue à droite, c'est Docker :whale:
-En plus d'être sympa, vous vous sentirez davantage en sécurité avec eux qu'avec une VM ...
+C'est l'heure des présentations ! :drum: La sympatique pieuvre à gauche, c'est Kubernetes :octopus:. La gentille baleine bleue à droite, c'est Docker :whale:
+En plus d'être sympa, vous vous sentirez davantage en sécurité avec elles qu'avec une VM ...
 
 ![](img/Docker-friends.png)
 
