@@ -80,7 +80,7 @@ Le système S3 (Simple Storage System) est un système de stockage développé p
 
 L'implémentation de S3 est payante mais sa spécification est gratuite et open source ! 
 
-**MinIO** fournit une implementation open source de S3. L'**INSEE** héberge ses propres serveurs et peut donc implémenter ce protocole S3 sans payer de location. Le coût de facturation des serveurs pris en charge par l'Etat n'est pas à la charge des utilisateurs contrairement à AWS S3. Vous pouvez donc stocker vos données sur MinIO comme si elles étaient sur S3 et ce, "gratuitement". :brain: :money_with_wings: :star_struck:
+**MinIO** fournit une implementation open source de S3. L'**INSEE** héberge ses propres serveurs et peut donc implémenter ce protocole S3 sans payer de location. **Le coût de facturation des serveurs pris en charge par l'Etat n'est pas à la charge des utilisateurs contrairement à AWS S3**. Vous pouvez donc stocker vos données sur MinIO comme si elles étaient sur S3 et ce, "gratuitement". :brain: :money_with_wings: :star_struck:
 
 Tous les services du datalab d'Onyxia peuvent nativement lire depuis et écrire vers S3 (MinIO) au moment de lancer votre service. Ainsi, les programmes que vous exécutez et les données que vous traitez peuvent être importés/exportés dans MinIO. Chaque élément hébergé dans MinIO, appelé "objet", est accessible par une URL **unique**. Vous pouvez restreindre ou au contraire étendre les droits d'accès à vos objets.
 
