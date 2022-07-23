@@ -11,7 +11,7 @@ Take your time and first enjoy cloud computing experience with Onyxia by attendi
 Welcome to this tutorial folks :rainbow: 
 We are hoping that you'll develop some serious data science skills :fire::fire::fire:  and enjoy this experience with the SSP Cloud Data Lab supported by [Onyxia](https://github.com/InseeFrLab/onyxia-web) . :sparkles:
 
-https://user-images.githubusercontent.com/37664429/180615611-708972a5-0d61-480b-9e93-4f1c87005168.gif
+![](https://user-images.githubusercontent.com/37664429/180615611-708972a5-0d61-480b-9e93-4f1c87005168.gif)
 
 # Prerequesites
 
