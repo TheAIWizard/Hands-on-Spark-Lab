@@ -18,7 +18,7 @@ We are hoping that you'll develop some serious data science skills :fire::fire::
 You'll have to create an account on the [Data Lab](https://datalab.sspcloud.fr/home) first to be able to launch the courses and access the Jupyter notebooks.
 
 Users can create their own accounts and authenticate with their own credentials.
-[authentification_ssplab.webm](https://user-images.githubusercontent.com/37664429/180615509-9606c69f-47ab-46b6-897b-839788b5bc64.webm)
+![](https://user-images.githubusercontent.com/37664429/180615509-9606c69f-47ab-46b6-897b-839788b5bc64.webm)
 
 # Spark tutorials
 
