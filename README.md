@@ -1,10 +1,21 @@
-# Spark courses on Onyxia           ![](First-steps-with-cloud-computing/img/Onyxia.png)  
+# Spark courses on [Onyxia](https://github.com/InseeFrLab)           ![](First-steps-with-cloud-computing/img/Onyxia.png)  
 ![](First-steps-with-cloud-computing/img/Apache_Spark_logo.png)  ![](First-steps-with-cloud-computing/img/kuberneteslogo.png)
 
-This repo hosts the interactive Spark courses powered by the SSP Cloud Data Lab. These tutorials are aimed at the 2nd year students at E.N.S.A.I.
+This repo hosts the interactive Spark courses powered by the [SSP Cloud](https://datalab.sspcloud.fr/home) Data Lab. These tutorials are aimed at the 2nd year students at E.N.S.A.I.
 Click on the [Lab 1,2,3](#spark-tutorials) link below :point_down: to launch a jupyter notebook according to your level of ability :mechanical_arm: :brain: :chart:
 
 Take your time and first enjoy cloud computing experience with Onyxia by attending [Lab 0](https://github.com/TheAIWizard/Hands-on-Spark-Lab/blob/main/First-steps-with-cloud-computing/First-steps-with-cloud-computing.md) :seat:
+
+# Overview
+
+Welcome to this tutorial folks :rainbow: 
+We are hoping that you'll develop some serious data science skills :fire::fire::fire:  and enjoy this experience with the SSP Cloud Data Lab supported by Onyxia. :sparkles:
+
+# Prerequesites
+
+You'll have to create an account on the [Data Lab](https://datalab.sspcloud.fr/home) first to be able to launch the courses and access the Jupyter notebooks.
+
+Users can create their own accounts and authenticate with their own credentials.
 
 # Spark tutorials
 
