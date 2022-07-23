@@ -1,6 +1,6 @@
 # TP 0 — Partie 1: Découverte d'Onyxia et de son datalab SSP Cloud
 
-:warning: Ce TP est un glow up de cette [version](#version-aws-du-tp-by-rémi-pépin) qui sera présenté à vos collègues en ingé 😉
+:warning: Ce TP est un glow up de cette [version](#version-aws-du-tp-by-rémi-pépin) (cliquez et prenez tout en bas de la page) qui sera présenté à vos collègues en ingé 😉
 
 Menu du jour :
 
