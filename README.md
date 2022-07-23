@@ -1,4 +1,4 @@
-# Spark courses on [Onyxia](https://www.onyxia.sh/)           ![](First-steps-with-cloud-computing/img/Onyxia.png)  
+# Spark courses on [Onyxia](https://www.onyxia.sh/)           [![](First-steps-with-cloud-computing/img/Onyxia.png)](https://www.onyxia.sh/) 
 ![](First-steps-with-cloud-computing/img/Apache_Spark_logo.png)  ![](First-steps-with-cloud-computing/img/kuberneteslogo.png)
 
 This repo hosts the interactive Spark courses powered by the [SSP Cloud](https://datalab.sspcloud.fr/home) Data Lab. These tutorials are aimed at the 2nd year students at E.N.S.A.I.
