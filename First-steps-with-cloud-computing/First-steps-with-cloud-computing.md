@@ -149,7 +149,7 @@ Nous venons d'apprendre à lancer un service Rstudio et nous pouvons y ouvrir un
 R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'installer R en ligne de commande sur votre service, il est préférable de fixer l'environnement d'éxécution de votre service. Et c'est bien ce qu'on fait en renseignant cette image qui permet d'avoir un VS Code avec tout ce dont vous avez besoin de pré-installé pour ce TP d'introduction (R, cython, java, C, ...)
 
 Conseil de bonne pratique: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.
-Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres avantages que nous verrons à la fin de cete section.
+Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres avantages que nous verrons à la fin de cette section.
 
 - [ ] Et bien on peut y aller ! :fire: Vous pouvez `Lancer` votre service :comet:
 
