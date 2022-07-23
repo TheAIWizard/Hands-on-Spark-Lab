@@ -31,7 +31,7 @@ Tap the airplane for your first launch ! It's time to discover the world of Spar
 ## Launch Lab 2 [:cyclone:](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_2.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true) 
 
 In this interactive course, you'll have a glimpse of how to power your ML models with Spark as an end user of Onyxia.
-The true adventure begins :grin: Tap the interference zone ! :alien: :robot:
+The true adventure begins :grin: Tap the interference zone ! :flying_saucer: :robot:
 
 ## Launch Lab 3 [:rocket:](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_3.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true) 
 
