@@ -2,7 +2,7 @@
 ![](First-steps-with-cloud-computing/img/Apache_Spark_logo.png)  ![](First-steps-with-cloud-computing/img/kuberneteslogo.png)
 
 This repo hosts the interactive Spark courses powered by the [SSP Cloud](https://datalab.sspcloud.fr/home) Data Lab. These tutorials are aimed at the 2nd year students at E.N.S.A.I.
-Click on the [Lab 1,2,3](#spark-tutorials) link at the bottom [:point_down:](#spark-tutorials) to launch a jupyter notebook according to your level of ability :mechanical_arm: :brain: :chart:
+Click on the [Lab 1,2,3](#spark-tutorials) link at the bottom [:point_down:](#spark-tutorials) (you can click on the finger too :wink:) to launch a jupyter notebook according to your level of ability :mechanical_arm: :brain: :chart:
 
 # Overview
 
