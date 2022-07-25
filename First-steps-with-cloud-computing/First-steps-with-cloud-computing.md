@@ -28,7 +28,7 @@ Menu du jour :
 
 ## Objectifs
 
-Dans un premier temps, ce TP a pour but de prendre en main l'interface du datalab [SSP Cloud](https://datalab.sspcloud.fr/home), une instance du logiciel open source [Onyxia](https://github.com/InseeFrLab). Puis, de vous représenter globalement, en toute simplicité, le contexte Spark. Qu'est ce qui se passe quand j'utilise Spark ? C'est quoi déjà ? Qu'est ce que je peux faire avec ? En quoi c'est stylé ? Bon allez, c'est parti on y va !
+Dans un premier temps, ce TP a pour but de prendre en main l'interface du datalab [SSP Cloud](https://datalab.sspcloud.fr/home), une instance du logiciel open source [Onyxia](https://github.com/InseeFrLab). 
 
 Pendant ce TP vous allez :
 
