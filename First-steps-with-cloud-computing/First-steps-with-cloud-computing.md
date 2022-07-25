@@ -144,13 +144,6 @@ Nous venons d'apprendre à lancer un service Rstudio et nous pouvons y ouvrir un
 - [ ] Se rendre dans `Configuration VS Code`
 - [ ] Dans l'onglet `Kubernetes`, choisir **admin** comme rôle 
 - [ ] Dans l'onglet `Security`, décochez _Enable IP protection_
-- [ ] Dans l'onglet `Service`, cochez _Custom image_ et dans _Version_, renseignez aiflowzone/onyxia-vs-code-python-r:0.1
-
-R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'installer R en ligne de commande sur votre service, il est préférable de fixer l'environnement d'éxécution de votre service. Et c'est bien ce qu'on fait en renseignant cette image qui permet d'avoir un VS Code avec tout ce dont vous avez besoin de pré-installé pour ce TP d'introduction (R, cython, java, C, ...)
-
-Conseil de bonne pratique: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.
-Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres avantages que nous verrons à la fin de cette section.
-
 - [ ] Et bien on peut y aller ! :fire: Vous pouvez `Lancer` votre service :comet:
 
 ![](img/terminal_vscode.png)
@@ -254,6 +247,9 @@ Le service que vous avez lancé ne dispose pas tous les programmes nécessaires 
 
 ### 8.3 Benchmark des langages :stopwatch::checkered_flag:
 
+Lequel sera le plus rapide ?
+![benchmark_initiald_1](https://user-images.githubusercontent.com/37664429/180735026-a9e2864e-4bff-4097-8c82-6bcada16b0cb.gif)
+
 Dans cette partie vous allez reproduire l'expérience du cours consistant à tester la vitesse de traitement de différents langages. Cela va se faire essentiellement avec la commande `time`. La commande `time` permet de mesurer la temps d'exécution d'une commande passer en argument. Exemple `time chmod 764 get_data.sh` permet de mesurez le temps nécessaire pour pour changer les permission du fichier get_data.sh. Notez chacun des résultats et vérifiez qu'ils sont cohérents avec ceux du cours. Si ce n'est pas les cas, essayez de comprendre pourquoi.
 
 - [ ] Pour lancer le code C compilé et le script bash vous devez faire `time ./[file]` 
@@ -272,8 +268,20 @@ Pour éteindre votre service, allez sur l'onglet `Mes services`. Vous pouvez ét
 
 ![giphy](https://user-images.githubusercontent.com/37664429/180465265-b7794cd0-d3e4-4064-a868-5a563e5adbb3.gif)
 
-[Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile)
+Manipuler des lignes de commande, ce n'est pas si compliqué finalement. Mais si c'était à refaire, vous serez d'accord que ce serait assez fastidieux de retaper toutes ces lignes de commandes juste pour récupérer vos données sur MinIO et faire un benchmark des langages. En particulier, devoir réinstaller R et le package cython à chaque fois que vous lancez un VS Code n'est pas très séduisant.
 
+Cette démarche a le défaut de ne pas être _reproductible_ i.e vous êtes obligé d'installer des packages en plus pour tester des scripts testés sur une autre machine.
+
+Si vous souhaitez réitérer l'expérience, reprenez les instructions dans la partie [7.1 Ouvrir un terminal sur son service](#71-ouvrir-un-terminal-sur-son-service) et en rajoutant une cette étape supplémentaire:
+- [ ] Dans l'onglet `Service`, cochez _Custom image_ et dans _Version_, renseignez aiflowzone/onyxia-vs-code-python-r:0.1
+
+R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'installer R en ligne de commande sur votre service, il est préférable de fixer l'environnement d'éxécution de votre service. Et c'est bien ce qu'on fait en renseignant cette ***image Docker aiflowzone/onyxia-vs-code-python-r:0.1 qui permet d'avoir un VS Code avec tout ce dont vous avez besoin de pré-installé*** pour ce TP d'introduction (R, cython, java, C, ...).
+
+Pour les plus chaud d'entre vous ou ceux qui vont suivre un parcours axé info, vous pourrez retrouver dans ce [Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile) comment cette image Docker est créée.
+Principe: nous repartons de l'image VS Code de base qui fait fonctionner le service et nous rajoutons simplement les lignes de commandes à lancer pour installer R, cython et OpenJDK (Java).![Screenshot 2022-07-25 at 11-05-26 docker-images Dockerfile at main · TheAIWizard docker-images](https://user-images.githubusercontent.com/37664429/180741240-80fd0205-585b-4624-bfa0-664119a2fac9.png)
+
+Conseil de bonne pratique: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.
+Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres [avantages](#723-des-avantages-qui-changent-beaucoup-la-donne) que nous avons déjà évoqué.
 
 ## Author
 - [Nathan Randriamanana](https://github.com/TheAIWizard)
