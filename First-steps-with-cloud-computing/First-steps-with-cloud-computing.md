@@ -208,7 +208,7 @@ Pour rappel ce benchmark se base sur le calcul de la température max annuelle �
 
 ###  8.1 Mise en place des fichiers du TP 
 
-Vous vous rappelez de ce fameux fichier TP0 disponible sur notre bon vieux Moodle ? Comme vous êtes trop fort, vous l'avez déjà déposé dans un serveur de stockage distant compatible S3. :brain: Si vous ne vous en rappellez pas, c'était à la partie [4.](#4-copie-des-données-dans-votre-espace-de-stockage)
+Vous vous rappelez de ce fameux fichier TP0 disponible sur notre bon vieux Moodle ? Comme vous êtes trop fort :brain::zap:, vous l'avez déjà déposé dans un serveur de stockage distant compatible S3. Si vous ne vous en rappellez pas, c'était à la partie [4.](#4-copie-des-données-dans-votre-espace-de-stockage)
 
 - [ ] Téléchargez vos fichiers stockés sur S3. Pour ce faire vous allez saisir la commande suivante `mc cp --recursive [s3/uri] [local_path]`.  Pour récupérer l'URI de votre objet S3, retournez sur MinIO, ouvrez votre bucket, cliquez sur le fichier à uploader et copier le chemin à gauche de `Create new path` comme expliqué précedemment dans la partie [4.](#4-copie-des-données-dans-votre-espace-de-stockage) Pour `local_path`, vous allez utiliser le répertoire courant avec un `.`. 
 
