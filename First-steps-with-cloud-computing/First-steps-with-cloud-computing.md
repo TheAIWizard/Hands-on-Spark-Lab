@@ -269,17 +269,19 @@ Pour éteindre votre service, allez sur l'onglet `Mes services`. Vous pouvez ét
 
 ![giphy](https://user-images.githubusercontent.com/37664429/180465265-b7794cd0-d3e4-4064-a868-5a563e5adbb3.gif)
 
-Manipuler des lignes de commande, ce n'est pas si compliqué finalement. Mais si c'était à refaire, vous serez d'accord que ce serait assez fastidieux de retaper toutes ces lignes de commandes juste pour récupérer vos données sur MinIO et faire un benchmark des langages. En particulier, devoir réinstaller R et le package cython à chaque fois que vous lancez un VS Code n'est pas très séduisant.
+Manipuler des lignes de commande, ce n'est pas si compliqué finalement. Mais si c'était à refaire, vous serez d'accord que ce serait assez fastidieux de retaper toutes ces lignes de commandes juste pour récupérer vos données sur MinIO et faire un benchmark des langages :stopwatch::checkered_flag:. En particulier, devoir réinstaller R et le package cython à chaque fois que vous lancez un VS Code n'est pas très séduisant.
 
 Cette démarche a le défaut de ne pas être _reproductible_ i.e vous êtes obligé d'installer des packages en plus pour tester des scripts testés sur une autre machine.
 
-Si vous souhaitez réitérer l'expérience, reprenez les instructions dans la partie [7.1 Ouvrir un terminal sur son service](#71-ouvrir-un-terminal-sur-son-service) et en rajoutant une cette étape supplémentaire:
+Si vous souhaitez réitérer l'expérience, reprenez les instructions dans la partie [7.1 Ouvrir un terminal sur son service](#71-ouvrir-un-terminal-sur-son-service) en rajoutant une cette étape supplémentaire:
 - [ ] Dans l'onglet `Service`, cochez _Custom image_ et dans _Version_, renseignez aiflowzone/onyxia-vs-code-python-r:0.1
 
 R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'installer R en ligne de commande sur votre service, il est préférable de fixer l'environnement d'éxécution de votre service. Et c'est bien ce qu'on fait en renseignant cette ***image Docker aiflowzone/onyxia-vs-code-python-r:0.1 qui permet d'avoir un VS Code avec tout ce dont vous avez besoin de pré-installé*** pour ce TP d'introduction (R, cython, java, C, ...).
 
 Pour les plus chaud d'entre vous ou ceux qui vont suivre un parcours axé info, vous pourrez retrouver dans ce [Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile) comment cette image Docker est créée.
-Principe: nous repartons de l'image VS Code de base qui fait fonctionner le service et nous rajoutons simplement les lignes de commandes à lancer pour installer R, cython et OpenJDK (Java).![Screenshot 2022-07-25 at 11-05-26 docker-images Dockerfile at main · TheAIWizard docker-images](https://user-images.githubusercontent.com/37664429/180741240-80fd0205-585b-4624-bfa0-664119a2fac9.png)
+Principe: nous repartons de l'image VS Code de base qui fait fonctionner le service et nous rajoutons simplement les lignes de commandes à lancer pour installer R, cython et OpenJDK (Java).
+
+![Screenshot 2022-07-25 at 11-05-26 docker-images Dockerfile at main · TheAIWizard docker-images](https://user-images.githubusercontent.com/37664429/180741240-80fd0205-585b-4624-bfa0-664119a2fac9.png)
 
 Conseil de bonne pratique: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.
 Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres [avantages](#723-des-avantages-qui-changent-beaucoup-la-donne) que nous avons déjà évoqué.
