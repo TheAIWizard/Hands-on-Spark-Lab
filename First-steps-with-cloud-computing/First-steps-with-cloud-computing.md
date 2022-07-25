@@ -187,7 +187,7 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 - [ ] Tapez dans le terminal `kubectl get pods`. Caliente ! Vous pouvez voir tous les services en cours de lancement.
 - [ ] Pourquoi pod ? Vous le verrez l'année prochaine mais pour le moment vous pouvez vous dire un pod = un conteneur. Même s'il y a une nuance, c'est souvent le cas en pratique.
 - [ ] Pour les très curieux, `kubectl` comme kube controller: un controller contrôle l'état du cluster en permanence. On peut donc contrôler les services qui tournent dans chaque node(serveur) et en particulier avoir les pods d'où `get pods`
-- [ ] Pour les très très curieux qui souhaitent voir sur quels nodes les pods tournent: tapez `kubectl get pods -o wide` et vous verrez une colonne supplémentaire correspondant aux workers. Il faudra être patient pour la suite ...
+- [ ] Pour les très très curieux qui souhaitent voir sur quels nodes les pods tournent: tapez `kubectl get pods -o wide` et vous verrez une colonne supplémentaire correspondant aux nodes. Il faudra être patient pour la suite ...
 
 #### 7.2.3 Des avantages qui changent beaucoup la donne: 
 
@@ -215,16 +215,20 @@ Pour rappel ce benchmark se base sur le calcul de la température max annuelle �
 
 ###  8.1 Mise en place des fichiers du TP 
 
-Vous vous rappelez de ce fameux fichier TP0 disponible sur notre bon vieux Moodle ? Comme vous êtes trop fort, vous l'avez déjà déposé dans un serveur de stockage distant compatible S3. Si vous ne vous en rappellez pas, c'était à la partie 4.
+Vous vous rappelez de ce fameux fichier TP0 disponible sur notre bon vieux Moodle ? Comme vous êtes trop fort, vous l'avez déjà déposé dans un serveur de stockage distant compatible S3. :brain: Si vous ne vous en rappellez pas, c'était à la partie [4.](#4-copie-des-données-dans-votre-espace-de-stockage)
 
-- [ ] Téléchargez vos fichiers stockés sur S3. Pour ce faire vous allez saisir la commande suivante `mc cp --recursive [s3/uri] [local_path]`.  Pour récupérer l'URI de votre objet S3, retournez sur MinIO, ouvrez votre bucket, cliquez sur le fichier à uploader et copier le chemin à gauche de `Create new path` comme expliqué précedemment dans la partie 4 . Pour `local_path`, vous allez utiliser le répertoire courant avec un `.`. Vous devriez obtenir une commande et une sortie similaire à celle-ci :
+- [ ] Téléchargez vos fichiers stockés sur S3. Pour ce faire vous allez saisir la commande suivante `mc cp --recursive [s3/uri] [local_path]`.  Pour récupérer l'URI de votre objet S3, retournez sur MinIO, ouvrez votre bucket, cliquez sur le fichier à uploader et copier le chemin à gauche de `Create new path` comme expliqué précedemment dans la partie [4.](#4-copie-des-données-dans-votre-espace-de-stockage) Pour `local_path`, vous allez utiliser le répertoire courant avec un `.`. 
+
+Exemple : `mc cp --recursive s3/amartin .` pour l'élève Alex Martin.
+
+Vous devriez obtenir une commande et une sortie similaire à celle-ci :
 
   ```
-  (basesspcloud) coder@vscode-520883-6dff9c886f-6pwpc:~/work$ mc cp --recursive s3/votre-identifiant/fichier TP.zip
-  ...dentifiant/fichier TP.zip:  15.84 KiB / 15.84 KiB
+  (basesspcloud) coder@vscode-520883-6dff9c886f-6pwpc:~/work$ mc cp --recursive s3/votre-identifiant/fichier_TP.zip
+  ...dentifiant/fichier_TP.zip:  15.84 KiB / 15.84 KiB
   ```
 
-- [ ] Avec la commande `ls` (*list*) vérifiez que vous avez bien téléchargé les fichiers sur S3 dans le répertoire courant. Vous devriez le voir apparaître dans le gestionnaire de donnéees de VS Code.
+- [ ] Avec la commande `ls` (*list*) vérifiez que vous avez bien téléchargé les fichiers sur S3 dans le répertoire courant. En principe, vous devriez aussi le voir apparaître dans le gestionnaire de donnéees de VS Code.
 
 - [ ] Vous allez maintenant extraire les fichiers de l'archive avec la commande `unzip [nom de votre fichier]`. Vérifiez que cela à bien fonctionné avec la commande `ls`
 
@@ -248,7 +252,7 @@ La machine virtuelle que vous avez crée ne dispose pas tous les programmes néc
 
 - [ ] **Installation de R** : pour installer R vous allez aussi utiliser le gestionnaire de package `apt-get`,  avec la ligne de commande suivante : `sudo apt-get install -y r-base`.  Le terminal va se remplir de texte pendant quelques minutes n'y prêtez pas attention, c'est juste la machine qui vous dit ce qu'elle fait. 
 
-### 8.3 Benchmark des langages
+### 8.3 Benchmark des langages :stopwatch::checkered_flag:
 
 Dans cette partie vous allez reproduire l'expérience du cours consistant à tester la vitesse de traitement de différents langages. Cela va se faire essentiellement avec la commande `time`. La commande `time` permet de mesurer la temps d'exécution d'une commande passer en argument. Exemple `time chmod 764 get_data.sh` permet de mesurez le temps nécessaire pour pour changer les permission du fichier get_data.sh. Notez chacun des résultats et vérifiez qu'ils sont cohérents avec ceux du cours. Si ce n'est pas les cas, essayez de comprendre pourquoi.
 
@@ -257,14 +261,14 @@ Dans cette partie vous allez reproduire l'expérience du cours consistant à tes
 - [ ] Pour les codes python utilisez la commande `time python3 [file.py]`
 - [ ] Pour lancer un script R vous devez saisir `time Rscript [filename.R]` dans votre terminal.
 
-## 9. Eteindre son service
+## 9. Eteindre son service :stop_button: :wastebasket:
 
 Une fois le taff fait, n'oubliez pas d'éteindre vos services ! **Pour ne pas gaspiller les ressources !**
 
 Pour éteindre votre service, allez sur l'onglet `Mes services`. Vous pouvez éteindre à tout moment, le service que vous souhaitez à coup de click sur l'icône poubelle.
 - [ ] ![](img/arret_service.png)
 
-## 10. Et si on recommence ?
+## 10. Et si on recommence ? :arrow_forward::repeat:
 
 ![giphy](https://user-images.githubusercontent.com/37664429/180465265-b7794cd0-d3e4-4064-a868-5a563e5adbb3.gif)
 
