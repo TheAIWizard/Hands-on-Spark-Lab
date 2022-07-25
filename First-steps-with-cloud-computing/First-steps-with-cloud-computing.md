@@ -46,7 +46,7 @@ Pendant ce TP vous allez :
 - Eteindre votre service
 
 
-## 1. Création d'un compte sur le SSP Cloud d'Onyxia
+## 1. Création d'un compte sur le SSP Cloud d'Onyxia :key:
 
 Il est nécessaire de disposer d’un compte personnel SSP Cloud pour en utiliser les services. Si vous n’avez pas de compte sur le SSP Cloud, vous pouvez vous en créer un en cliquant sur ce lien (https://datalab.sspcloud.fr/home) puis suivre les indications dans l'onglet `Connexion`. Deux points sont importants à noter :
 - vous devez utiliser votre adresse mail ENSAI
@@ -242,7 +242,7 @@ Vous devriez obtenir une commande et une sortie similaire à celle-ci :
 
 ### 8.2 Installer R et un package python
 
-La machine virtuelle que vous avez crée ne dispose pas tous les programmes nécessaires au benchmark.
+Le service que vous avez lancé ne dispose pas tous les programmes nécessaires au benchmark.
 
 - [ ] **Installation de python-dev** : `openjdk` est nécessaire pour éxécuter du code compilé en Java. Pour l'installer, vous allez utiliser `apt-get`, un gestionnaire de packages avancé. La commande à utiliser est `sudo apt-get install -y openjdk-11-jre-headless` (`sudo` pour dire que vous exécuter la commande en super user, `apt-get` pour dire que vous utiliser le gestionnaire de package, `install` pour dire que vous voulez installez un package, `-y` pour valider l'installation, et `openjdk-11-jre-headless` le nom du package)
   - [ ] Installez `Cython` avec `pip3 ` et compilez le code cython en faisant :
