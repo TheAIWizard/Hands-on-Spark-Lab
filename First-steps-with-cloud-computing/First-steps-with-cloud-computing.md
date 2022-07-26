@@ -273,7 +273,7 @@ Manipuler des lignes de commande, ce n'est pas si compliqué finalement. Mais si
 
 Cette démarche a le défaut de ne pas être _reproductible_ i.e vous êtes obligé d'installer des packages en plus pour tester des scripts testés sur une autre machine.
 
-Si vous souhaitez réitérer l'expérience, reprenez les instructions dans la partie [7.1 Ouvrir un terminal sur son service](#71-ouvrir-un-terminal-sur-son-service) en rajoutant une cette étape supplémentaire:
+Si vous souhaitez réitérer l'expérience, reprenez les instructions dans la partie [7.1 Ouvrir un terminal sur son service](#71-ouvrir-un-terminal-sur-son-service) en rajoutant cette étape supplémentaire:
 - [ ] Dans l'onglet `Service`, cochez _Custom image_ et dans _Version_, renseignez aiflowzone/onyxia-vs-code-python-r:0.1
 
 R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'installer R en ligne de commande sur votre service, il est préférable de fixer l'environnement d'éxécution de votre service. Et c'est bien ce qu'on fait en renseignant cette ***image Docker aiflowzone/onyxia-vs-code-python-r:0.1 qui permet d'avoir un VS Code avec tout ce dont vous avez besoin de pré-installé*** pour ce TP d'introduction (R, cython, java, C, ...).
