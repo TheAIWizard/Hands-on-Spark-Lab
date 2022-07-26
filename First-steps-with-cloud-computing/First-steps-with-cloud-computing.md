@@ -145,7 +145,7 @@ Nous venons d'apprendre à lancer un service Rstudio et nous pouvons y ouvrir un
 - [ ] Dans l'onglet `Kubernetes`, choisir **admin** comme rôle 
 - [ ] Dans l'onglet `Security`, décochez _Enable IP protection_
 - [ ] Et bien on peut y aller ! :fire: Vous pouvez `Lancer` votre service :comet:
-
+- [ ] Ouvrez un terminal comme ci-dessous:
 ![](img/terminal_vscode.png)
 
 ### 7.2 Le terminal, un outil pour gérer ses services en ligne de commande
