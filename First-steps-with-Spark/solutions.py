@@ -5,3 +5,8 @@ df_tweet_big = spark.read.json("s3a://nrandriamanana/diffusion/formation/data/tw
 # caching
 df_tweet.cache()
 df_tweet_big.cache()
+
+df_tweet.show(5)
+df_tweet.printSchema()
+df_tweet_big.show(5)
+df_tweet_big.printSchema()
