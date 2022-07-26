@@ -278,13 +278,13 @@ Si vous souhaitez réitérer l'expérience, reprenez les instructions dans la pa
 
 R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'installer R en ligne de commande sur votre service, il est préférable de fixer l'environnement d'éxécution de votre service. Et c'est bien ce qu'on fait en renseignant cette ***image Docker aiflowzone/onyxia-vs-code-python-r:0.1 qui permet d'avoir un VS Code avec tout ce dont vous avez besoin de pré-installé*** pour ce TP d'introduction (R, cython, java, C, ...).
 
+***Conseil de bonne pratique***: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.  
+Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres [avantages](#723-des-avantages-qui-changent-beaucoup-la-donne) que nous avons déjà évoqué.
+
 Pour les plus chaud d'entre vous ou ceux qui vont suivre un parcours axé info, vous pourrez retrouver dans ce [Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile) comment cette image Docker est créée.
 Principe: nous repartons de l'image VS Code de base qui fait fonctionner le service et nous rajoutons simplement les lignes de commandes à lancer pour installer R, cython et OpenJDK (Java).
 
 ![Screenshot 2022-07-25 at 11-05-26 docker-images Dockerfile at main · TheAIWizard docker-images](https://user-images.githubusercontent.com/37664429/180741240-80fd0205-585b-4624-bfa0-664119a2fac9.png)
-
-Conseil de bonne pratique: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.
-Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres [avantages](#723-des-avantages-qui-changent-beaucoup-la-donne) que nous avons déjà évoqué.
 
 ## Author
 - [Nathan Randriamanana](https://github.com/TheAIWizard)
