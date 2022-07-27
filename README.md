@@ -26,15 +26,21 @@ https://user-images.githubusercontent.com/37664429/180615802-7698ee0e-0386-44dc-
 ## Launch Lab 1 [:flight_departure:](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_1.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true "Click for departure !") 
 
 In this interactive course, you'll learn the first steps of Spark as an end user of Onyxia.
-Tap the airplane for your first launch ! It's time to discover the world of Spark :sparkling_heart: :world_map:
+**Tap the airplane for your first launch !** It's time to discover the world of Spark :sparkling_heart: :world_map:
+
+[Launch](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_1.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true "Click for departure !")
 
 ## Launch Lab 2 [:cyclone:](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_2.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true "Click the interference zone !") 
 
 In this interactive course, you'll have a glimpse of how to power your ML models with Spark as an end user of Onyxia.
-The true adventure begins :grin: Tap the interference zone ! :flying_saucer: :robot:
+The true adventure begins :grin: **Tap the interference zone !** :flying_saucer: :robot:
+
+[Launch](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_2.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true "Click the interference zone !")
 
 ## Launch Lab 3 [:rocket:](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_3.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true "Click to prepare your ascent towards the Spark verse !") 
 
 In this interactive course, you'll master the basic of stream processing with Spark as an end user of Onyxia.
 You'll eventually be able to process tweets from Twitter continuously.
-You're ready to reach new levels :dove: Smash the rocket emoji for the last course ! :boom::100:
+You're ready to reach new levels :dove: **Smash the rocket emoji for the last course !** :boom::100:
+
+[Launch](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&kubernetes.role=%C2%ABadmin%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter_lab_3.sh%C2%BB&security.allowlist.enabled=false&spark.sparkui=true "Click to prepare your ascent towards the Spark verse !")
