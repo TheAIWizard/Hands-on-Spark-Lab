@@ -1,8 +1,8 @@
 # Spark courses on Onyxia          [![](First-steps-with-cloud-computing/img/Onyxia.png)](https://www.onyxia.sh/ "Go to Onyxia's website") 
-[![](First-steps-with-cloud-computing/img/Apache_Spark_logo.png)](https://spark.apache.org/)  [![](First-steps-with-cloud-computing/img/kuberneteslogo.png)](https://kubernetes.io/docs/home/)
+[![](First-steps-with-cloud-computing/img/Apache_Spark_logo.png)](https://spark.apache.org/ "Go to Spark")  [![](First-steps-with-cloud-computing/img/kuberneteslogo.png)](https://kubernetes.io/docs/home/ "Go to Kubernetes")
 
 This repo hosts the interactive Spark courses powered by the [SSP Cloud](https://datalab.sspcloud.fr/home "Go to SSP Cloud") Data Lab. These tutorials are aimed at the 2nd year students at E.N.S.A.I.
-Scroll to the bottom until you reach the [Spark tutorials](#spark-tutorials) section or tap that emoji [:point_down:](#spark-tutorials) to launch one of the dockerized jupyter notebooks according to your level of ability :mechanical_arm: :brain: :chart:
+Scroll to the bottom until you reach the [Spark tutorials](#spark-tutorials "Go to the Spark courses") section or tap that emoji [:point_down:](#spark-tutorials "Go to the Spark courses") to launch one of the dockerized jupyter notebooks according to your level of ability :mechanical_arm: :brain: :chart:
 
 # Overview
 
@@ -15,7 +15,7 @@ Take your time and first enjoy cloud computing experience with Onyxia by attendi
 
 # Prerequesites
 
-You'll have to create an account on the [Data Lab](https://datalab.sspcloud.fr/home) first to be able to launch the courses and access the Jupyter notebooks.
+You'll have to create an account on the [Data Lab](https://datalab.sspcloud.fr/home "Go to the Data Lab") first to be able to launch the courses and access the Jupyter notebooks.
 
 Users can create their own accounts and authenticate with their own credentials.
 
