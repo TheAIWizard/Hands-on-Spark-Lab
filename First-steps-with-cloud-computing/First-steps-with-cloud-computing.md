@@ -229,7 +229,7 @@ Vous devriez obtenir une commande et une sortie similaire à celle-ci :
 
   `chmod 764 get_data.sh awk.sh GetMaxTempC`
 
-  Pour les rendre exécutable. Pour plus de détails sur la autorisation et la commande chmod (*change mode*) la page [wikipedia](https://fr.wikipedia.org/wiki/Chmod) est une bonne documentation.
+  Pour les rendre exécutable. Pour plus de détails sur l'autorisation et la commande chmod (*change mode*) la page [wikipedia](https://fr.wikipedia.org/wiki/Chmod) est une bonne documentation.
 
 - [ ] Maintenant que vous avez vos fichiers, vous allez exécuter le script `get_data.sh`. Pour ce faire tapez `./get_data.sh`.  Ce script va récupérer les fichier depuis les serveurs de la NOAA (= météo France étatsunienne) et les mettre en forme pour le TP.
 
@@ -251,12 +251,12 @@ Lequel sera le plus rapide ?
 
 ![benchmark_initiald_1](https://user-images.githubusercontent.com/37664429/180735026-a9e2864e-4bff-4097-8c82-6bcada16b0cb.gif)
 
-Dans cette partie vous allez reproduire l'expérience du cours consistant à tester la vitesse de traitement de différents langages. Cela va se faire essentiellement avec la commande `time`. La commande `time` permet de mesurer la temps d'exécution d'une commande passer en argument. Exemple `time chmod 764 get_data.sh` permet de mesurez le temps nécessaire pour pour changer les permission du fichier get_data.sh. Notez chacun des résultats et vérifiez qu'ils sont cohérents avec ceux du cours. Si ce n'est pas les cas, essayez de comprendre pourquoi.
+Dans cette partie vous allez reproduire l'expérience du cours consistant à tester la vitesse de traitement de différents langages. Cela va se faire essentiellement avec la commande `time`. La commande `time` permet de mesurer le temps d'exécution d'une commande passer en argument. Exemple `time chmod 764 get_data.sh` permet de mesurer le temps nécessaire pour changer les permissions du fichier get_data.sh. Notez chacun des résultats et vérifiez qu'ils sont cohérents avec ceux du cours. Si ce n'est pas les cas, essayez de comprendre pourquoi.
 
 - [ ] Pour lancer le code C compilé et le script bash vous devez faire `time ./[file]` 
 - [ ] Pour lancer le code java compilé en jar vous devez utiliser la commande `time java -jar [file.jar]`
 - [ ] Pour les codes python utilisez la commande `time python3 [file.py]`
-- [ ] Pour lancer un script R vous devez saisir `time Rscript [filename.R]` dans votre terminal.
+- [ ] Pour lancer un script R, vous devez saisir `time Rscript [filename.R]` dans votre terminal.
 
 ## 9. Eteindre son service :stop_button: :wastebasket:
 
