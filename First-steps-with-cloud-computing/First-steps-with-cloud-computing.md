@@ -140,7 +140,7 @@ https://user-images.githubusercontent.com/37664429/179776774-0e4b779f-a841-4269-
 
 Nous venons d'apprendre à lancer un service Rstudio et nous pouvons y ouvrir un terminal. Toutefois, il est courant d'utiliser plusieurs langages. Nous allons donc plutôt opter pour un service VS Code.
 
-- [ ] Choisir le service VS Code dans le catalogue des services en configurant dans l'option `Configuration VS Code > Kubernetes`, **admin** comme Role.
+- [ ] Choisir le service VS Code dans le **Catalogue des services**
 - [ ] Se rendre dans `Configuration VS Code`
 - [ ] Dans l'onglet `Kubernetes`, choisir **admin** comme rôle 
 - [ ] Dans l'onglet `Security`, décochez _Enable IP protection_
