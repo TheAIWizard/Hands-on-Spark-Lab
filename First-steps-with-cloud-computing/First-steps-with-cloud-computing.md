@@ -73,7 +73,7 @@ Dans l'onglet “**Catalogue de services**”, vous trouverez, entre autres :
 - VS Code, votre éditeur de code préféré 
 - R Studio, l'environnement phare pour manipuler R 
 - Postgresql, bien pratique pour vos bases de données
-- Bien d'autres services dédiés à _l'analyse de données_, à la _Dataviz_, aux _calculs distribués_, au _data engineering_, au _DevOps_, au _ML Ops_, au _machine-learning_...
+- Bien d'autres services dédiés à _l'analyse de données_, à la _Dataviz_, au _calcul distribué_, au _data engineering_, au _DevOps_, au _ML Ops_, au _machine-learning_...
 
 
 ## 3 Accès à votre espace de stockage MinIO : l'alternative open source à Amazon Simple Storage Service (S3)
