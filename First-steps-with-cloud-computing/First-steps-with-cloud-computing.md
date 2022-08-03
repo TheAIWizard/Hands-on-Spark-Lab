@@ -185,7 +185,7 @@ Sans entrer dans les détails, Kubernetes est un orchestrateur qui permet de lan
 #### 7.2.3 Des avantages qui changent beaucoup la donne: 
 
   - Votre code ne dépend pas de l'environnemnent de votre machine donc fini les problèmes du type "c'est pas juste :sob: ça ne marche pas sur ma machine mais chez toi si ! :salt: :salt: :salt: ". C'est ce qu'on appelle la *reproductibilité*. Votre code est indépendant de l'environnement d'éxécution et vous n'avez besoin de rien installer ou désinstaller de plus pour éxécuter le code de quelqu'un. 
-  - *Portabilité* :point_right: Votre code peut s'éxécuter sur tout type de machines différentes avec les ressources suffisantes. 
+  - *Portabilité* :point_right: Votre code peut s'éxécuter sur tout type de machines différentes avec les ressources suffisantes. Il est facile de _migrer_ votre application d'un cloud à l'autre (de AWS au SSP Cloud par exemple) 
   - *Sans Pitié* :pirate_flag: :rat: Vous n'avez pas peur de "casser" votre service car vous pouvez en recréer un autre sans émotion à tout moment (parce que vous avez séparé le code de l'environnement d'éxécution) contrairement à la VM donc expérimentez au max ! 
   - Et bien d'autres encores comme la *scalabilité* :ladder: mais qui ne nous concerne pas encore à ce stade.
    
