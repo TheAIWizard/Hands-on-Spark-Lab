@@ -280,11 +280,14 @@ R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'
 
 ***Conseil de bonne pratique***: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.  
 ![Schematriptique-code-environnement-donnees](https://user-images.githubusercontent.com/37664429/183658218-090b04ee-9784-45bd-81a5-3dc785bc88b8.png)
+
 Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres [avantages](#723-des-avantages-qui-changent-beaucoup-la-donne) que nous avons déjà évoqué. 
 
-Petit exemple pour ceux qui sont au fond de la classe: Si vous avez cassé votre service VS Code, vous ne perdez pas votre code car vous avez régulièrement push votre code sur Git. Pareil pour les données. Vous ne perdez pas vos données si votre service VS Code meurt car elles sont hébergées sur votre bucket MinIO. Que des avantages !
+Petit exemple pour ceux qui sont au fond de la classe: Si vous avez cassé votre service VS Code, vous ne perdez pas votre code car vous avez régulièrement push votre code sur Git. Pareil pour les données. Vous ne perdez pas vos données si votre service VS Code meurt car elles sont hébergées sur votre bucket MinIO. Que des avantages ! 
 
-Pour les plus chaud d'entre vous ou ceux qui vont suivre un parcours axé info, vous pourrez retrouver dans ce [Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile) comment cette image Docker est créée.
+(ce n'est pas tout, vous pouvez aussi faire des choses assez NRV comme automatiser le test de votre code et le déploiement en continu de votre application à coup de CI/CD)
+
+Pour les plus chaud d'entre vous ou ceux qui vont suivre un parcours axé info, vous pourrez retrouver dans ce [Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile) comment cette image Docker 'aiflowzone/onyxia-vs-code-python-r:0.1' est créée.
 Principe: nous repartons de l'image VS Code de base qui fait fonctionner le service et nous rajoutons simplement les lignes de commandes à lancer pour installer R, cython et OpenJDK (Java).
 
 ![Screenshot 2022-07-25 at 11-05-26 docker-images Dockerfile at main · TheAIWizard docker-images](https://user-images.githubusercontent.com/37664429/180741240-80fd0205-585b-4624-bfa0-664119a2fac9.png)
