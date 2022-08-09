@@ -279,7 +279,10 @@ Si vous souhaitez réitérer l'expérience, reprenez les instructions dans la pa
 R n'est pas installé sur la version de l'image actuelle de VS Code. Plutôt qu'installer R en ligne de commande sur votre service, il est préférable de fixer l'environnement d'éxécution de votre service. Et c'est bien ce qu'on fait en renseignant cette ***image Docker aiflowzone/onyxia-vs-code-python-r:0.1 qui permet d'avoir un VS Code avec tout ce dont vous avez besoin de pré-installé*** pour ce TP d'introduction (R, cython, java, C, ...).
 
 ***Conseil de bonne pratique***: On cherche **toujours** à séparer le code de l'environnement d'éxécution et du stockage des données.  
-Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres [avantages](#723-des-avantages-qui-changent-beaucoup-la-donne) que nous avons déjà évoqué.
+![Schematriptique-code-environnement-donnees](https://user-images.githubusercontent.com/37664429/183658218-090b04ee-9784-45bd-81a5-3dc785bc88b8.png)
+Pourquoi ? Cela permet de découpler au maximum les différentes sources d'erreur et bien d'autres [avantages](#723-des-avantages-qui-changent-beaucoup-la-donne) que nous avons déjà évoqué. 
+
+Petit exemple pour ceux qui sont au fond de la classe: Si vous avez cassé votre service VS Code, vous ne perdez pas votre code car vous avez régulièrement push votre code sur Git. Pareil pour les données. Vous ne perdez pas vos données si votre service VS Code meurt car elles sont hébergées sur votre bucket MinIO. Que des avantages !
 
 Pour les plus chaud d'entre vous ou ceux qui vont suivre un parcours axé info, vous pourrez retrouver dans ce [Dockerfile](https://github.com/TheAIWizard/docker-images/blob/main/data%20science/onyxia/vscode/Dockerfile) comment cette image Docker est créée.
 Principe: nous repartons de l'image VS Code de base qui fait fonctionner le service et nous rajoutons simplement les lignes de commandes à lancer pour installer R, cython et OpenJDK (Java).
