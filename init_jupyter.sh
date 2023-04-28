@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Clone the repository in /home/jovyan/work
-REPO=tuto-interactif-minimal
+# REPO=tuto-interactif-minimal
+REPO=Hands-on-Spark-Lab
 REPO_URL=https://github.com/TheAIWizard/${REPO}.git
 # $1 is a positional argument
 IPYNB_PATH=$1
