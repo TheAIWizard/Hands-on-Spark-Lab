@@ -15,4 +15,4 @@ chown -R jovyan:users $ROOT_PROJECT_DIRECTORY/${REPO}
 # Open a given notebook when starting Jupyter Lab
 jupyter server --generate-config
 # echo "c.LabApp.default_url = '/lab/tree/${REPO}/First-steps-with-Spark/First-steps-with-Spark.ipynb'" >> $HOME/.jupyter/jupyter_server_config.py
-[ -z "$IPYNB_PATH" ] || echo "c.LabApp.default_url = '/lab/tree/${REPO}/${IPYNB_PATH%.*}/${IPYNB_PATH}'" >> $HOME/.jupyter/jupyter_server_config.py
+[ -z "$IPYNB_PATH" ] || echo "c.LabApp.default_url = '/lab/tree/${REPO}/${IPYNB_PATH%.*}/${IPYNB_PATH%.ipynb}'" >> $HOME/.jupyter/jupyter_server_config.py
