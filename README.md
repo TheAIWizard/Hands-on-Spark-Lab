@@ -30,7 +30,7 @@ In this interactive course, you'll learn the first steps of Spark as an end user
 
 [Launch](https://datalab.sspcloud.fr/launcher/ide/jupyter-pyspark?autoLaunch=true&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter.sh%C2%BB&init.personalInitArgs=%C2%ABFirst-steps-with-Spark%C2%BB "Click for departure !")
 
-## Launch Lab 2 [:cyclone:](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/jupyter?autoLaunch=true&onyxia.friendlyName=%C2%ABLab%202%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter.sh%C2%BB&init.personalInitArgs=%C2%ABSpark-ML.ipynb%C2%BB&kubernetes.role=%C2%ABadmin%C2%BB&security.allowlist.enabled=false&spark.sparkui=true "Click the interference zone !") 
+## Launch Lab 2 [:cyclone:](https://datalab.sspcloud.fr/launcher/ide/jupyter-pyspark?autoLaunch=true&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FTheAIWizard%2FHands-on-Spark-Lab%2Fmain%2Finit_jupyter.sh%C2%BB&init.personalInitArgs=%C2%ABSpark-ML%C2%BB "Click the interference zone !") 
 
 In this interactive course, you'll have a glimpse of how to power your ML models with Spark as an end user of Onyxia.
 The true adventure begins :grin: **Tap the interference zone !** :flying_saucer: :robot:
